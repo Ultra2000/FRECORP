@@ -25,7 +25,7 @@
                 </div>
                 <div>
                     <div class="text-white font-bold">Conforme RGPD</div>
-                    <div class="text-slate-400 text-sm">Depuis mai 2018</div>
+                    <div class="text-slate-400 text-sm">Hébergement et traitements en France</div>
                 </div>
             </div>
             <div class="glass-card px-6 py-4 rounded-2xl flex items-center gap-4">
@@ -191,9 +191,87 @@
                     <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-5 flex items-start gap-4">
                         <i class="fas fa-check-circle text-green-400 text-xl mt-1"></i>
                         <div>
-                            <h4 class="text-white font-bold mb-2">Aucun transfert hors UE</h4>
-                            <p>Toutes vos données sont stockées et traitées exclusivement sur des serveurs situés en France, chez notre hébergeur O2switch à Clermont-Ferrand. Aucune donnée n'est transférée vers des pays tiers à l'Union Européenne.</p>
+                            <h4 class="text-white font-bold mb-2">Hébergement en France</h4>
+                            <p>Vos données commerciales et de compte sont stockées et traitées exclusivement sur des serveurs situés en France, chez notre hébergeur O2switch à Clermont-Ferrand.</p>
+                            <p class="mt-3 text-sm">Si certains traitements ponctuels (lecture automatique de factures par IA, par exemple) nécessitent un sous-traitant hors UE, ils sont systématiquement encadrés par les <strong class="text-white">Clauses Contractuelles Types (CCT)</strong> de la Commission européenne et listés dans la section « Sous-traitants » ci-dessus. Aucun transfert ne se fait sans cadre juridique approprié.</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-white/10">
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                    <i class="fas fa-handshake text-indigo-400"></i>
+                    Liste des sous-traitants
+                </h2>
+                <div class="text-slate-400 space-y-3">
+                    <p>Pour fournir notre service, nous faisons appel aux sous-traitants suivants, tous soumis à des clauses contractuelles RGPD :</p>
+                    <div class="overflow-x-auto bg-slate-800/50 rounded-xl p-4 mt-4">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="text-white border-b border-white/10">
+                                    <th class="text-left py-2 px-2">Sous-traitant</th>
+                                    <th class="text-left py-2 px-2">Finalité</th>
+                                    <th class="text-left py-2 px-2">Localisation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-white/5">
+                                    <td class="py-2 px-2"><strong class="text-white">O2switch</strong></td>
+                                    <td class="py-2 px-2">Hébergement web et base de données</td>
+                                    <td class="py-2 px-2">🇫🇷 France (Clermont-Ferrand)</td>
+                                </tr>
+                                <tr class="border-b border-white/5">
+                                    <td class="py-2 px-2"><strong class="text-white">__SERVICE_EMAIL__</strong></td>
+                                    <td class="py-2 px-2">Envoi d'emails transactionnels</td>
+                                    <td class="py-2 px-2">__LOCALISATION__</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-2"><strong class="text-white">__SERVICE_IA__</strong></td>
+                                    <td class="py-2 px-2">Lecture automatique des factures (OCR/IA)</td>
+                                    <td class="py-2 px-2">__LOCALISATION__</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    {{-- ⚠️ À COMPLÉTER : remplacer __SERVICE_EMAIL__, __SERVICE_IA__ et __LOCALISATION__ par les services réels que tu utilises (Mailtrap, Resend, OpenAI, Mistral, etc.) et leurs localisations. --}}
+                    <p class="text-sm mt-4">La liste est mise à jour à chaque ajout/modification de sous-traitant. Vous pouvez nous contacter pour obtenir la liste complète à jour ainsi qu'une copie des accords de sous-traitance.</p>
+                </div>
+            </section>
+
+            <hr class="border-white/10">
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                    <i class="fas fa-clock text-indigo-400"></i>
+                    Durée de conservation des données
+                </h2>
+                <div class="text-slate-400 space-y-3">
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li><strong class="text-white">Données de compte (email, nom)</strong> — pendant toute la durée d'utilisation du service, puis 3 ans après la dernière connexion (prospection commerciale).</li>
+                        <li><strong class="text-white">Données commerciales (factures, ventes, comptabilité)</strong> — 10 ans à compter de la clôture de l'exercice (article L123-22 du Code de commerce).</li>
+                        <li><strong class="text-white">Logs de connexion</strong> — 12 mois (article L34-1 du CPCE).</li>
+                        <li><strong class="text-white">Données de support</strong> — 2 ans après la résolution du ticket.</li>
+                        <li><strong class="text-white">Cookies et données techniques</strong> — durée de la session ou maximum 13 mois.</li>
+                    </ul>
+                    <p class="mt-4">À l'issue de ces durées, les données sont soit supprimées, soit anonymisées de manière irréversible.</p>
+                </div>
+            </section>
+
+            <hr class="border-white/10">
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                    <i class="fas fa-user-shield text-indigo-400"></i>
+                    Contact RGPD / Référent Données
+                </h2>
+                <div class="text-slate-400 space-y-3">
+                    <p>FRECORP n'a pas l'obligation légale de désigner un Délégué à la Protection des Données (DPO), conformément à l'article 37 du RGPD. Toutefois, un référent dédié aux questions de protection des données est joignable :</p>
+                    <div class="bg-indigo-500/10 border border-indigo-500/30 rounded-xl p-5 mt-4">
+                        <p><strong class="text-white">Email dédié :</strong> <a href="mailto:rgpd@frecorp.fr" class="text-indigo-400 hover:underline">rgpd@frecorp.fr</a></p>
+                        <p class="text-sm mt-2">Pour toute demande relative à vos droits, transferts de données, ou questions de conformité.</p>
                     </div>
                 </div>
             </section>
@@ -234,7 +312,7 @@
             </section>
 
             <div class="pt-4 text-sm text-slate-500">
-                <p><i class="fas fa-calendar mr-2"></i>Dernière mise à jour : 6 février 2026</p>
+                <p><i class="fas fa-calendar mr-2"></i>Dernière mise à jour : 9 mai 2026</p>
             </div>
         </div>
     </div>

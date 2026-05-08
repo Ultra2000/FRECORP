@@ -30,15 +30,19 @@
         <meta property="og:image" content="@yield('og_image')">
         <meta name="twitter:image" content="@yield('og_image')">
     @else
-        <meta property="og:image" content="https://frecorp.fr/assets/og-image.svg">
-        <meta name="twitter:image" content="https://frecorp.fr/assets/og-image.svg">
+        <meta property="og:image" content="{{ asset('images/logo.png') }}">
+        <meta name="twitter:image" content="{{ asset('images/logo.png') }}">
     @endif
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     @hasSection('og_type')
         <meta property="og:type" content="@yield('og_type')">
     @else
         <meta property="og:type" content="website">
     @endif
+    <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0f172a">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
@@ -190,8 +194,10 @@
                 <ul class="text-slate-500 space-y-3 text-sm">
                     <li><a href="{{ route('mentions-legales') }}" class="hover:text-indigo-400 transition">Mentions légales</a></li>
                     <li><a href="{{ route('cgu') }}" class="hover:text-indigo-400 transition">CGU</a></li>
+                    <li><a href="{{ route('cgv') }}" class="hover:text-indigo-400 transition">CGV</a></li>
                     <li><a href="{{ route('confidentialite') }}" class="hover:text-indigo-400 transition">Confidentialité</a></li>
                     <li><a href="{{ route('rgpd') }}" class="hover:text-indigo-400 transition">RGPD</a></li>
+                    <li><a href="#" data-cookie-settings class="hover:text-indigo-400 transition">Gérer mes cookies</a></li>
                 </ul>
             </div>
         </div>
@@ -233,6 +239,9 @@
             });
         });
     </script>
+
+    @include('partials.cookie-banner')
+
     @yield('scripts')
 </body>
 </html>

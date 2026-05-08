@@ -18,6 +18,7 @@ class PageController extends Controller
     public function roadmap()         { return view('pages.roadmap'); }
     public function mentionsLegales() { return view('pages.mentions-legales'); }
     public function cgu()             { return view('pages.cgu'); }
+    public function cgv()             { return view('pages.cgv'); }
     public function confidentialite() { return view('pages.confidentialite'); }
     public function rgpd()            { return view('pages.rgpd'); }
 
@@ -27,7 +28,12 @@ class PageController extends Controller
             ->add(Url::create('/')->setPriority(1.0)->setChangeFrequency('weekly'))
             ->add(Url::create('/blog')->setPriority(0.9)->setChangeFrequency('daily'))
             ->add(Url::create('/demo')->setPriority(0.7))
-            ->add(Url::create('/roadmap')->setPriority(0.5));
+            ->add(Url::create('/roadmap')->setPriority(0.5))
+            ->add(Url::create('/mentions-legales')->setPriority(0.3))
+            ->add(Url::create('/cgu')->setPriority(0.3))
+            ->add(Url::create('/cgv')->setPriority(0.3))
+            ->add(Url::create('/confidentialite')->setPriority(0.3))
+            ->add(Url::create('/rgpd')->setPriority(0.3));
 
         Post::published()->each(function (Post $post) use ($sitemap) {
             $sitemap->add(

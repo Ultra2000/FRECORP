@@ -155,9 +155,12 @@
                     <i class="fas fa-exclamation-triangle text-indigo-400"></i>
                     Article 9 - Limitation de responsabilité
                 </h2>
-                <p class="text-slate-400">
-                    FRECORP ne saurait être tenu responsable des dommages indirects, pertes de données, manques à gagner ou préjudices commerciaux résultant de l'utilisation ou de l'impossibilité d'utiliser le service. La responsabilité totale de FRECORP est limitée au montant des sommes effectivement versées par l'utilisateur au cours des 12 derniers mois.
-                </p>
+                <div class="text-slate-400 space-y-3">
+                    <p>FRECORP s'engage à fournir le service avec diligence et selon les règles de l'art, étant précisé qu'il pèse sur FRECORP une obligation de moyens, à l'exclusion de toute obligation de résultat.</p>
+                    <p><strong class="text-white">Vis-à-vis des professionnels :</strong> la responsabilité totale de FRECORP est limitée au montant des sommes effectivement versées par l'utilisateur au cours des 12 derniers mois précédant le fait générateur, avec un minimum de 100 € pour les utilisateurs en période d'essai gratuite. FRECORP ne saurait être tenu responsable des dommages indirects, pertes de données, manques à gagner ou préjudices commerciaux.</p>
+                    <p><strong class="text-white">Vis-à-vis des consommateurs (particuliers) :</strong> conformément aux articles L217-3 et suivants du Code de la consommation, les présentes limitations ne peuvent en aucun cas faire obstacle à la mise en œuvre de la garantie légale de conformité ou de la garantie des vices cachés, ni aux droits que l'utilisateur consommateur tient des dispositions impératives applicables.</p>
+                    <p>FRECORP demeure responsable, sans plafonnement, en cas de dol, faute lourde, ou de manquement à une obligation essentielle privant le contrat de sa substance.</p>
+                </div>
             </section>
 
             <hr class="border-white/10">
@@ -197,7 +200,7 @@
             </section>
 
             <div class="pt-4 text-sm text-slate-500">
-                <p><i class="fas fa-calendar mr-2"></i>Dernière mise à jour : 6 février 2026</p>
+                <p><i class="fas fa-calendar mr-2"></i>Dernière mise à jour : 9 mai 2026</p>
             </div>
         </div>
     </div>

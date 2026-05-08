@@ -137,10 +137,10 @@
                 <div class="text-slate-400 space-y-3">
                     <p><strong class="text-white">Nous ne vendons jamais vos données.</strong> Elles peuvent être partagées uniquement avec :</p>
                     <ul class="list-disc list-inside space-y-2 ml-4">
-                        <li><strong class="text-white">Sous-traitants techniques</strong> - Hébergeur (O2switch), service email transactionnel</li>
-                        <li><strong class="text-white">Autorités compétentes</strong> - Si requis par la loi ou décision de justice</li>
+                        <li><strong class="text-white">Sous-traitants techniques</strong> — Hébergeur (O2switch), service d'envoi d'emails, service d'intelligence artificielle pour la lecture automatique des factures (la liste détaillée et à jour figure sur la page <a href="{{ route('rgpd') }}" class="text-indigo-400 hover:underline">RGPD</a>).</li>
+                        <li><strong class="text-white">Autorités compétentes</strong> — Si requis par la loi ou une décision de justice.</li>
                     </ul>
-                    <p class="mt-4">Tous nos sous-traitants sont soumis à des clauses contractuelles de protection des données conformes au RGPD.</p>
+                    <p class="mt-4">Tous nos sous-traitants sont soumis à des clauses contractuelles de protection des données conformes au RGPD. Les éventuels transferts hors UE sont encadrés par les Clauses Contractuelles Types de la Commission européenne.</p>
                 </div>
             </section>
 
@@ -220,13 +220,14 @@
                 </h2>
                 <div class="text-slate-400">
                     <p>Pour toute question sur cette politique ou pour exercer vos droits :</p>
-                    <p class="mt-2"><strong class="text-white">Email :</strong> <a href="mailto:contact@frecorp.fr" class="text-indigo-400 hover:underline">contact@frecorp.fr</a></p>
+                    <p class="mt-2"><strong class="text-white">Email général :</strong> <a href="mailto:contact@frecorp.fr" class="text-indigo-400 hover:underline">contact@frecorp.fr</a></p>
+                    <p class="mt-1"><strong class="text-white">Email RGPD dédié :</strong> <a href="mailto:rgpd@frecorp.fr" class="text-indigo-400 hover:underline">rgpd@frecorp.fr</a></p>
                     <p class="mt-4">Vous pouvez également adresser une réclamation à la CNIL : <a href="https://www.cnil.fr" class="text-indigo-400 hover:underline" target="_blank" rel="noopener">www.cnil.fr</a></p>
                 </div>
             </section>
 
             <div class="pt-4 text-sm text-slate-500">
-                <p><i class="fas fa-calendar mr-2"></i>Dernière mise à jour : 6 février 2026</p>
+                <p><i class="fas fa-calendar mr-2"></i>Dernière mise à jour : 9 mai 2026</p>
             </div>
         </div>
     </div>
