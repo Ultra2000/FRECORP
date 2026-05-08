@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
 
 class PostResource extends Resource
 {
@@ -27,13 +28,19 @@ class PostResource extends Resource
                         ->label('Titre')
                         ->required()
                         ->live(onBlur: true)
-                        ->maxLength(255),
+                        ->maxLength(255)
+                        ->afterStateUpdated(function (string $operation, ?string $state, Forms\Set $set) {
+                            if ($operation === 'create' && filled($state)) {
+                                $set('slug', Str::slug($state));
+                            }
+                        }),
 
                     Forms\Components\TextInput::make('slug')
                         ->label('Slug URL')
                         ->required()
                         ->unique(ignoreRecord: true)
-                        ->maxLength(255),
+                        ->maxLength(255)
+                        ->helperText('Généré automatiquement depuis le titre, modifiable au besoin.'),
 
                     Forms\Components\Select::make('category')
                         ->label('Catégorie')

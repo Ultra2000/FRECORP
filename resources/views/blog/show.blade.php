@@ -22,7 +22,7 @@
         'datePublished' => $post->published_at->toIso8601String(),
         'dateModified' => $post->updated_at->toIso8601String(),
         'author' => ['@type' => 'Organization', 'name' => 'FRECORP'],
-        'publisher' => ['@type' => 'Organization', 'name' => 'FRECORP', 'logo' => ['@type' => 'ImageObject', 'url' => 'https://frecorp.fr/favicon.svg']],
+        'publisher' => ['@type' => 'Organization', 'name' => 'FRECORP', 'logo' => ['@type' => 'ImageObject', 'url' => asset('images/logo.png')]],
         'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => route('blog.show', $post)],
     ];
     if ($post->featured_image) $jsonLd['image'] = Storage::url($post->featured_image);

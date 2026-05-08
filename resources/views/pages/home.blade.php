@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'FRECORP ERP | L\'ERP qui lit vos factures à votre place — Stock, Facturation IA, Devis en ligne, POS')
+@section('title', 'FRECORP ERP | L\'ERP qui lit vos factures à votre place')
 @section('meta_description', 'FRECORP ERP : import IA de factures fournisseur, devis en ligne acceptés en 1 clic, Factur-X EN16931, multi-entrepôts, POS, RH et comptabilité. 1 mois gratuit. Prêt pour la réforme 2026.')
 
 @section('og_title', 'Convertisseur Factur-X Gratuit & ERP Complet | FRECORP')
