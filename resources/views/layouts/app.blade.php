@@ -48,21 +48,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
-                    animation: { 'float': 'float 6s ease-in-out infinite' },
-                    keyframes: { float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } } }
-                }
-            }
-        }
-    </script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <style>
         .glass-card { background:rgba(255,255,255,0.03); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.1); box-shadow:0 8px 32px 0 rgba(0,0,0,0.37); }
@@ -95,7 +85,7 @@
     </style>
     @yield('styles')
 </head>
-<body class="bg-[#0f172a] text-slate-200 overflow-x-hidden min-h-screen">
+<body class="font-sans bg-[#0f172a] text-slate-200 overflow-x-hidden min-h-screen">
 
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
         <div class="floating-orb orb-1"></div>
