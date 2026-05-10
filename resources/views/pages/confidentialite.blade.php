@@ -148,6 +148,45 @@
 
             <section>
                 <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                    <i class="fas fa-envelope-open-text text-indigo-400"></i>
+                    4 bis. Newsletter et convertisseur public
+                </h2>
+                <div class="text-slate-400 space-y-3">
+                    <p>Lorsque vous utilisez notre convertisseur Factur-X public ou que vous vous inscrivez à notre newsletter depuis ce service, voici précisément ce qui est traité :</p>
+                    <div class="bg-slate-800/50 rounded-xl p-5 space-y-3">
+                        <div>
+                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Base légale</h4>
+                            <p class="text-sm">Votre <strong class="text-white">consentement explicite</strong> (case à cocher non pré-cochée), conformément à l'article 6.1.a du RGPD. Vous pouvez le retirer à tout moment via le lien de désinscription dans chaque email.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-database text-emerald-400 mr-2"></i>Données collectées</h4>
+                            <p class="text-sm">Adresse email, adresse IP (pour anti-abus), date d'inscription, source (toast post-téléchargement ou CTA quota). Aucune autre donnée personnelle n'est exigée.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-shield-halved text-emerald-400 mr-2"></i>Double opt-in</h4>
+                            <p class="text-sm">Aucune communication n'est envoyée tant que vous n'avez pas cliqué sur le lien de confirmation reçu par email. Cela protège également les personnes dont l'email aurait été saisi par un tiers.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-file-pdf text-emerald-400 mr-2"></i>Lead magnet</h4>
+                            <p class="text-sm">À la confirmation, vous recevez en pièce jointe un guide PDF rédigé par FRECORP. Aucun lien de tracking individuel n'est inséré dans le PDF.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-clock-rotate-left text-emerald-400 mr-2"></i>Conservation</h4>
+                            <p class="text-sm">Tant que vous restez inscrit. Après désinscription, votre adresse est conservée 30 jours en suppression logique (pour traiter d'éventuelles réclamations), puis effacée définitivement.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-file-invoice text-emerald-400 mr-2"></i>Convertisseur public (sans inscription)</h4>
+                            <p class="text-sm">Les fichiers que vous convertissez sont traités en mémoire et conservés <strong class="text-white">au maximum 24 heures</strong> sur nos serveurs avant suppression automatique. Aucune donnée extraite (montants, clients, fournisseurs) n'est conservée au-delà.</p>
+                        </div>
+                    </div>
+                    <p class="mt-4">Voir aussi : la liste détaillée des sous-traitants email et IA sur la page <a href="{{ route('rgpd') }}" class="text-indigo-400 hover:underline">RGPD</a>.</p>
+                </div>
+            </section>
+
+            <hr class="border-white/10">
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                     <i class="fas fa-clock text-indigo-400"></i>
                     5. Durée de conservation
                 </h2>

@@ -224,19 +224,23 @@
                                     <td class="py-2 px-2">🇫🇷 France (Clermont-Ferrand)</td>
                                 </tr>
                                 <tr class="border-b border-white/5">
-                                    <td class="py-2 px-2"><strong class="text-white">__SERVICE_EMAIL__</strong></td>
-                                    <td class="py-2 px-2">Envoi d'emails transactionnels</td>
-                                    <td class="py-2 px-2">__LOCALISATION__</td>
+                                    <td class="py-2 px-2"><strong class="text-white">Resend</strong></td>
+                                    <td class="py-2 px-2">Envoi d'emails transactionnels (confirmation d'inscription, newsletter, notifications)</td>
+                                    <td class="py-2 px-2">🇺🇸 États-Unis — encadré par les Clauses Contractuelles Types (CCT) de la Commission européenne</td>
+                                </tr>
+                                <tr class="border-b border-white/5">
+                                    <td class="py-2 px-2"><strong class="text-white">Anthropic (Claude)</strong></td>
+                                    <td class="py-2 px-2">Lecture automatique des factures par IA (extraction des données structurées)</td>
+                                    <td class="py-2 px-2">🇺🇸 États-Unis — CCT, aucune donnée utilisée pour l'entraînement</td>
                                 </tr>
                                 <tr>
-                                    <td class="py-2 px-2"><strong class="text-white">__SERVICE_IA__</strong></td>
-                                    <td class="py-2 px-2">Lecture automatique des factures (OCR/IA)</td>
-                                    <td class="py-2 px-2">__LOCALISATION__</td>
+                                    <td class="py-2 px-2"><strong class="text-white">Google (Gemini)</strong></td>
+                                    <td class="py-2 px-2">Lecture automatique des factures (fallback IA si Claude indisponible)</td>
+                                    <td class="py-2 px-2">🇺🇸 États-Unis — CCT, aucune donnée utilisée pour l'entraînement</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    {{-- ⚠️ À COMPLÉTER : remplacer __SERVICE_EMAIL__, __SERVICE_IA__ et __LOCALISATION__ par les services réels que tu utilises (Mailtrap, Resend, OpenAI, Mistral, etc.) et leurs localisations. --}}
                     <p class="text-sm mt-4">La liste est mise à jour à chaque ajout/modification de sous-traitant. Vous pouvez nous contacter pour obtenir la liste complète à jour ainsi qu'une copie des accords de sous-traitance.</p>
                 </div>
             </section>
@@ -254,6 +258,8 @@
                         <li><strong class="text-white">Données commerciales (factures, ventes, comptabilité)</strong> — 10 ans à compter de la clôture de l'exercice (article L123-22 du Code de commerce).</li>
                         <li><strong class="text-white">Logs de connexion</strong> — 12 mois (article L34-1 du CPCE).</li>
                         <li><strong class="text-white">Données de support</strong> — 2 ans après la résolution du ticket.</li>
+                        <li><strong class="text-white">Inscription newsletter</strong> — tant que vous restez inscrit ; 30 jours de suppression logique après désinscription, puis effacement définitif.</li>
+                        <li><strong class="text-white">Fichiers convertis (convertisseur public)</strong> — 24 heures maximum, suppression automatique après ce délai.</li>
                         <li><strong class="text-white">Cookies et données techniques</strong> — durée de la session ou maximum 13 mois.</li>
                     </ul>
                     <p class="mt-4">À l'issue de ces durées, les données sont soit supprimées, soit anonymisées de manière irréversible.</p>
