@@ -1,53 +1,53 @@
-@extends('layouts.app')
+@extends('layouts.landing')
 
 @section('title', 'Politique de Confidentialité | FRECORP ERP')
 @section('meta_description', 'Politique de confidentialité de FRECORP ERP - Comment nous protégeons vos données personnelles et professionnelles.')
 
 @section('content')
-<main class="pt-32 pb-20 px-6">
-    <div class="max-w-4xl mx-auto relative z-10">
+<section class="pt-32 pb-20 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
 
         <nav class="mb-8 text-sm">
-            <a href="{{ route('home') }}" class="text-slate-400 hover:text-indigo-400 transition">Accueil</a>
-            <span class="mx-2 text-slate-600">/</span>
-            <span class="text-white">Politique de Confidentialité</span>
+            <a href="{{ route('home') }}" class="text-slate-400 hover:text-indigo-600 transition">Accueil</a>
+            <span class="mx-2 text-slate-300">/</span>
+            <span class="text-slate-900">Politique de Confidentialité</span>
         </nav>
 
-        <h1 class="text-4xl sm:text-5xl font-extrabold mb-8">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-8" style="letter-spacing:-.03em">
             <span class="gradient-text">Politique de Confidentialité</span>
         </h1>
 
-        <div class="glass-card rounded-3xl p-8 lg:p-12 space-y-8">
+        <div class="glass-card glass-card-static p-8 lg:p-12 space-y-8">
 
-            <div class="bg-indigo-500/10 border border-indigo-500/30 rounded-2xl p-6">
+            <div class="bg-indigo-50 border border-indigo-200 rounded-2xl p-6">
                 <div class="flex items-start gap-4">
                     <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-shield-check text-indigo-400 text-xl"></i>
+                        <i class="fas fa-shield-check text-indigo-600 text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-white font-bold text-lg mb-2">Notre engagement</h3>
-                        <p class="text-slate-400">Chez FRECORP, la protection de vos données est notre priorité. Vos données commerciales restent votre propriété exclusive et ne sont jamais vendues ou partagées à des fins publicitaires.</p>
+                        <h3 class="text-slate-900 font-bold text-lg mb-2">Notre engagement</h3>
+                        <p class="text-slate-600">Chez FRECORP, la protection de vos données est notre priorité. Vos données commerciales restent votre propriété exclusive et ne sont jamais vendues ou partagées à des fins publicitaires.</p>
                     </div>
                 </div>
             </div>
 
             <section>
-                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <i class="fas fa-database text-indigo-400"></i>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <i class="fas fa-database text-indigo-600"></i>
                     1. Données collectées
                 </h2>
-                <div class="text-slate-400 space-y-4">
+                <div class="text-slate-600 space-y-4">
                     <p>Nous collectons les données suivantes dans le cadre de l'utilisation de notre service :</p>
-                    <div class="bg-slate-800/50 rounded-xl p-4">
-                        <h4 class="text-white font-semibold mb-2">Données d'identification :</h4>
+                    <div class="bg-slate-50 rounded-xl p-4">
+                        <h4 class="text-slate-900 font-semibold mb-2">Données d'identification :</h4>
                         <ul class="list-disc list-inside space-y-1 ml-2">
                             <li>Nom, prénom, adresse email</li>
                             <li>Numéro de téléphone (optionnel)</li>
                             <li>Nom de l'entreprise</li>
                         </ul>
                     </div>
-                    <div class="bg-slate-800/50 rounded-xl p-4">
-                        <h4 class="text-white font-semibold mb-2">Données commerciales :</h4>
+                    <div class="bg-slate-50 rounded-xl p-4">
+                        <h4 class="text-slate-900 font-semibold mb-2">Données commerciales :</h4>
                         <ul class="list-disc list-inside space-y-1 ml-2">
                             <li>Informations clients et fournisseurs</li>
                             <li>Produits, stocks, ventes, achats</li>
@@ -55,8 +55,8 @@
                             <li>Données employés (si module RH activé)</li>
                         </ul>
                     </div>
-                    <div class="bg-slate-800/50 rounded-xl p-4">
-                        <h4 class="text-white font-semibold mb-2">Données techniques :</h4>
+                    <div class="bg-slate-50 rounded-xl p-4">
+                        <h4 class="text-slate-900 font-semibold mb-2">Données techniques :</h4>
                         <ul class="list-disc list-inside space-y-1 ml-2">
                             <li>Adresse IP, type de navigateur</li>
                             <li>Logs de connexion (pour la sécurité)</li>
@@ -66,60 +66,60 @@
                 </div>
             </section>
 
-            <hr class="border-white/10">
+            <hr class="border-slate-200">
 
             <section>
-                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <i class="fas fa-bullseye text-indigo-400"></i>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <i class="fas fa-bullseye text-indigo-600"></i>
                     2. Finalités du traitement
                 </h2>
-                <div class="text-slate-400 space-y-3">
+                <div class="text-slate-600 space-y-3">
                     <p>Vos données sont utilisées exclusivement pour :</p>
                     <ul class="list-disc list-inside space-y-2 ml-4">
-                        <li><strong class="text-white">Fournir le service</strong> - Permettre l'utilisation de l'ERP et de ses fonctionnalités</li>
-                        <li><strong class="text-white">Améliorer le service</strong> - Analyser l'usage pour optimiser l'expérience</li>
-                        <li><strong class="text-white">Communication</strong> - Envoyer des notifications importantes (mises à jour, sécurité)</li>
-                        <li><strong class="text-white">Support technique</strong> - Répondre à vos demandes d'assistance</li>
-                        <li><strong class="text-white">Obligations légales</strong> - Se conformer aux exigences réglementaires</li>
+                        <li><strong class="text-slate-900">Fournir le service</strong> - Permettre l'utilisation de l'ERP et de ses fonctionnalités</li>
+                        <li><strong class="text-slate-900">Améliorer le service</strong> - Analyser l'usage pour optimiser l'expérience</li>
+                        <li><strong class="text-slate-900">Communication</strong> - Envoyer des notifications importantes (mises à jour, sécurité)</li>
+                        <li><strong class="text-slate-900">Support technique</strong> - Répondre à vos demandes d'assistance</li>
+                        <li><strong class="text-slate-900">Obligations légales</strong> - Se conformer aux exigences réglementaires</li>
                     </ul>
                 </div>
             </section>
 
-            <hr class="border-white/10">
+            <hr class="border-slate-200">
 
             <section>
-                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <i class="fas fa-lock text-indigo-400"></i>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <i class="fas fa-lock text-indigo-600"></i>
                     3. Sécurité des données
                 </h2>
-                <div class="text-slate-400 space-y-3">
+                <div class="text-slate-600 space-y-3">
                     <p>Nous mettons en œuvre des mesures de sécurité robustes :</p>
                     <div class="grid sm:grid-cols-2 gap-4 mt-4">
-                        <div class="bg-slate-800/50 rounded-xl p-4 flex items-start gap-3">
-                            <i class="fas fa-key text-green-400 mt-1"></i>
+                        <div class="bg-slate-50 rounded-xl p-4 flex items-start gap-3">
+                            <i class="fas fa-key text-emerald-600 mt-1"></i>
                             <div>
-                                <h4 class="text-white font-semibold">Chiffrement</h4>
+                                <h4 class="text-slate-900 font-semibold">Chiffrement</h4>
                                 <p class="text-sm">TLS 1.3 pour toutes les communications, chiffrement AES-256 au repos</p>
                             </div>
                         </div>
-                        <div class="bg-slate-800/50 rounded-xl p-4 flex items-start gap-3">
-                            <i class="fas fa-server text-green-400 mt-1"></i>
+                        <div class="bg-slate-50 rounded-xl p-4 flex items-start gap-3">
+                            <i class="fas fa-server text-emerald-600 mt-1"></i>
                             <div>
-                                <h4 class="text-white font-semibold">Hébergement</h4>
+                                <h4 class="text-slate-900 font-semibold">Hébergement</h4>
                                 <p class="text-sm">Serveurs en France chez O2switch, certifiés ISO 27001</p>
                             </div>
                         </div>
-                        <div class="bg-slate-800/50 rounded-xl p-4 flex items-start gap-3">
-                            <i class="fas fa-clock-rotate-left text-green-400 mt-1"></i>
+                        <div class="bg-slate-50 rounded-xl p-4 flex items-start gap-3">
+                            <i class="fas fa-clock-rotate-left text-emerald-600 mt-1"></i>
                             <div>
-                                <h4 class="text-white font-semibold">Sauvegardes</h4>
+                                <h4 class="text-slate-900 font-semibold">Sauvegardes</h4>
                                 <p class="text-sm">Sauvegardes quotidiennes automatiques avec rétention 30 jours</p>
                             </div>
                         </div>
-                        <div class="bg-slate-800/50 rounded-xl p-4 flex items-start gap-3">
-                            <i class="fas fa-user-shield text-green-400 mt-1"></i>
+                        <div class="bg-slate-50 rounded-xl p-4 flex items-start gap-3">
+                            <i class="fas fa-user-shield text-emerald-600 mt-1"></i>
                             <div>
-                                <h4 class="text-white font-semibold">Accès restreint</h4>
+                                <h4 class="text-slate-900 font-semibold">Accès restreint</h4>
                                 <p class="text-sm">Principe du moindre privilège pour tous les accès internes</p>
                             </div>
                         </div>
@@ -127,92 +127,92 @@
                 </div>
             </section>
 
-            <hr class="border-white/10">
+            <hr class="border-slate-200">
 
             <section>
-                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <i class="fas fa-share-nodes text-indigo-400"></i>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <i class="fas fa-share-nodes text-indigo-600"></i>
                     4. Partage des données
                 </h2>
-                <div class="text-slate-400 space-y-3">
-                    <p><strong class="text-white">Nous ne vendons jamais vos données.</strong> Elles peuvent être partagées uniquement avec :</p>
+                <div class="text-slate-600 space-y-3">
+                    <p><strong class="text-slate-900">Nous ne vendons jamais vos données.</strong> Elles peuvent être partagées uniquement avec :</p>
                     <ul class="list-disc list-inside space-y-2 ml-4">
-                        <li><strong class="text-white">Sous-traitants techniques</strong> — Hébergeur (O2switch), service d'envoi d'emails, service d'intelligence artificielle pour la lecture automatique des factures (la liste détaillée et à jour figure sur la page <a href="{{ route('rgpd') }}" class="text-indigo-400 hover:underline">RGPD</a>).</li>
-                        <li><strong class="text-white">Autorités compétentes</strong> — Si requis par la loi ou une décision de justice.</li>
+                        <li><strong class="text-slate-900">Sous-traitants techniques :</strong> hébergeur (O2switch), service d'envoi d'emails, service d'intelligence artificielle pour la lecture automatique des factures (la liste détaillée et à jour figure sur la page <a href="{{ route('rgpd') }}" class="text-indigo-600 hover:underline">RGPD</a>).</li>
+                        <li><strong class="text-slate-900">Autorités compétentes :</strong> si requis par la loi ou une décision de justice.</li>
                     </ul>
                     <p class="mt-4">Tous nos sous-traitants sont soumis à des clauses contractuelles de protection des données conformes au RGPD. Les éventuels transferts hors UE sont encadrés par les Clauses Contractuelles Types de la Commission européenne.</p>
                 </div>
             </section>
 
-            <hr class="border-white/10">
+            <hr class="border-slate-200">
 
             <section>
-                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <i class="fas fa-envelope-open-text text-indigo-400"></i>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <i class="fas fa-envelope-open-text text-indigo-600"></i>
                     4 bis. Newsletter et convertisseur public
                 </h2>
-                <div class="text-slate-400 space-y-3">
+                <div class="text-slate-600 space-y-3">
                     <p>Lorsque vous utilisez notre convertisseur Factur-X public ou que vous vous inscrivez à notre newsletter depuis ce service, voici précisément ce qui est traité :</p>
-                    <div class="bg-slate-800/50 rounded-xl p-5 space-y-3">
+                    <div class="bg-slate-50 rounded-xl p-5 space-y-3">
                         <div>
-                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Base légale</h4>
-                            <p class="text-sm">Votre <strong class="text-white">consentement explicite</strong> (case à cocher non pré-cochée), conformément à l'article 6.1.a du RGPD. Vous pouvez le retirer à tout moment via le lien de désinscription dans chaque email.</p>
+                            <h4 class="text-slate-900 font-semibold mb-1"><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Base légale</h4>
+                            <p class="text-sm">Votre <strong class="text-slate-900">consentement explicite</strong> (case à cocher non pré-cochée), conformément à l'article 6.1.a du RGPD. Vous pouvez le retirer à tout moment via le lien de désinscription dans chaque email.</p>
                         </div>
                         <div>
-                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-database text-emerald-400 mr-2"></i>Données collectées</h4>
+                            <h4 class="text-slate-900 font-semibold mb-1"><i class="fas fa-database text-emerald-400 mr-2"></i>Données collectées</h4>
                             <p class="text-sm">Adresse email, adresse IP (pour anti-abus), date d'inscription, source (toast post-téléchargement ou CTA quota). Aucune autre donnée personnelle n'est exigée.</p>
                         </div>
                         <div>
-                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-shield-halved text-emerald-400 mr-2"></i>Double opt-in</h4>
+                            <h4 class="text-slate-900 font-semibold mb-1"><i class="fas fa-shield-halved text-emerald-400 mr-2"></i>Double opt-in</h4>
                             <p class="text-sm">Aucune communication n'est envoyée tant que vous n'avez pas cliqué sur le lien de confirmation reçu par email. Cela protège également les personnes dont l'email aurait été saisi par un tiers.</p>
                         </div>
                         <div>
-                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-file-pdf text-emerald-400 mr-2"></i>Lead magnet</h4>
+                            <h4 class="text-slate-900 font-semibold mb-1"><i class="fas fa-file-pdf text-emerald-400 mr-2"></i>Lead magnet</h4>
                             <p class="text-sm">À la confirmation, vous recevez en pièce jointe un guide PDF rédigé par FRECORP. Aucun lien de tracking individuel n'est inséré dans le PDF.</p>
                         </div>
                         <div>
-                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-clock-rotate-left text-emerald-400 mr-2"></i>Conservation</h4>
+                            <h4 class="text-slate-900 font-semibold mb-1"><i class="fas fa-clock-rotate-left text-emerald-400 mr-2"></i>Conservation</h4>
                             <p class="text-sm">Tant que vous restez inscrit. Après désinscription, votre adresse est conservée 30 jours en suppression logique (pour traiter d'éventuelles réclamations), puis effacée définitivement.</p>
                         </div>
                         <div>
-                            <h4 class="text-white font-semibold mb-1"><i class="fas fa-file-invoice text-emerald-400 mr-2"></i>Convertisseur public (sans inscription)</h4>
-                            <p class="text-sm">Les fichiers que vous convertissez sont traités en mémoire et conservés <strong class="text-white">au maximum 24 heures</strong> sur nos serveurs avant suppression automatique. Aucune donnée extraite (montants, clients, fournisseurs) n'est conservée au-delà.</p>
+                            <h4 class="text-slate-900 font-semibold mb-1"><i class="fas fa-file-invoice text-emerald-400 mr-2"></i>Convertisseur public (sans inscription)</h4>
+                            <p class="text-sm">Les fichiers que vous convertissez sont traités en mémoire et conservés <strong class="text-slate-900">au maximum 24 heures</strong> sur nos serveurs avant suppression automatique. Aucune donnée extraite (montants, clients, fournisseurs) n'est conservée au-delà.</p>
                         </div>
                     </div>
-                    <p class="mt-4">Voir aussi : la liste détaillée des sous-traitants email et IA sur la page <a href="{{ route('rgpd') }}" class="text-indigo-400 hover:underline">RGPD</a>.</p>
+                    <p class="mt-4">Voir aussi : la liste détaillée des sous-traitants email et IA sur la page <a href="{{ route('rgpd') }}" class="text-indigo-600 hover:underline">RGPD</a>.</p>
                 </div>
             </section>
 
-            <hr class="border-white/10">
+            <hr class="border-slate-200">
 
             <section>
-                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <i class="fas fa-clock text-indigo-400"></i>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <i class="fas fa-clock text-indigo-600"></i>
                     5. Durée de conservation
                 </h2>
-                <div class="text-slate-400 space-y-3">
+                <div class="text-slate-600 space-y-3">
                     <ul class="list-disc list-inside space-y-2 ml-4">
-                        <li><strong class="text-white">Données de compte</strong> - Conservées pendant toute la durée d'utilisation du service + 3 ans après suppression</li>
-                        <li><strong class="text-white">Données commerciales</strong> - Selon vos obligations légales (10 ans pour documents comptables)</li>
-                        <li><strong class="text-white">Logs de connexion</strong> - 12 mois (obligation légale)</li>
-                        <li><strong class="text-white">Données de support</strong> - 2 ans après résolution du ticket</li>
+                        <li><strong class="text-slate-900">Données de compte</strong> - Conservées pendant toute la durée d'utilisation du service + 3 ans après suppression</li>
+                        <li><strong class="text-slate-900">Données commerciales</strong> - Selon vos obligations légales (10 ans pour documents comptables)</li>
+                        <li><strong class="text-slate-900">Logs de connexion</strong> - 12 mois (obligation légale)</li>
+                        <li><strong class="text-slate-900">Données de support</strong> - 2 ans après résolution du ticket</li>
                     </ul>
                 </div>
             </section>
 
-            <hr class="border-white/10">
+            <hr class="border-slate-200">
 
             <section>
-                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <i class="fas fa-cookie text-indigo-400"></i>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <i class="fas fa-cookie text-indigo-600"></i>
                     6. Cookies
                 </h2>
-                <div class="text-slate-400 space-y-3">
+                <div class="text-slate-600 space-y-3">
                     <p>Nous utilisons uniquement des cookies essentiels au fonctionnement :</p>
-                    <div class="bg-slate-800/50 rounded-xl p-4 mt-4">
+                    <div class="bg-slate-50 rounded-xl p-4 mt-4">
                         <table class="w-full text-sm">
                             <thead>
-                                <tr class="text-white border-b border-white/10">
+                                <tr class="text-slate-900 border-b border-slate-200">
                                     <th class="text-left py-2">Cookie</th>
                                     <th class="text-left py-2">Finalité</th>
                                     <th class="text-left py-2">Durée</th>
@@ -229,46 +229,46 @@
                 </div>
             </section>
 
-            <hr class="border-white/10">
+            <hr class="border-slate-200">
 
             <section>
-                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <i class="fas fa-user-check text-indigo-400"></i>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <i class="fas fa-user-check text-indigo-600"></i>
                     7. Vos droits
                 </h2>
-                <div class="text-slate-400 space-y-3">
+                <div class="text-slate-600 space-y-3">
                     <p>Conformément au RGPD, vous disposez des droits suivants :</p>
                     <div class="grid sm:grid-cols-2 gap-3 mt-4">
-                        <div class="bg-slate-800/50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-eye text-indigo-400"></i><span><strong class="text-white">Accès</strong> - Consulter vos données</span></div>
-                        <div class="bg-slate-800/50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-pen text-indigo-400"></i><span><strong class="text-white">Rectification</strong> - Corriger vos données</span></div>
-                        <div class="bg-slate-800/50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-trash text-indigo-400"></i><span><strong class="text-white">Effacement</strong> - Supprimer vos données</span></div>
-                        <div class="bg-slate-800/50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-download text-indigo-400"></i><span><strong class="text-white">Portabilité</strong> - Exporter vos données</span></div>
-                        <div class="bg-slate-800/50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-ban text-indigo-400"></i><span><strong class="text-white">Opposition</strong> - Refuser certains traitements</span></div>
-                        <div class="bg-slate-800/50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-pause text-indigo-400"></i><span><strong class="text-white">Limitation</strong> - Restreindre le traitement</span></div>
+                        <div class="bg-slate-50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-eye text-indigo-600"></i><span><strong class="text-slate-900">Accès</strong> - Consulter vos données</span></div>
+                        <div class="bg-slate-50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-pen text-indigo-600"></i><span><strong class="text-slate-900">Rectification</strong> - Corriger vos données</span></div>
+                        <div class="bg-slate-50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-trash text-indigo-600"></i><span><strong class="text-slate-900">Effacement</strong> - Supprimer vos données</span></div>
+                        <div class="bg-slate-50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-download text-indigo-600"></i><span><strong class="text-slate-900">Portabilité</strong> - Exporter vos données</span></div>
+                        <div class="bg-slate-50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-ban text-indigo-600"></i><span><strong class="text-slate-900">Opposition</strong> - Refuser certains traitements</span></div>
+                        <div class="bg-slate-50 rounded-lg p-3 flex items-center gap-3"><i class="fas fa-pause text-indigo-600"></i><span><strong class="text-slate-900">Limitation</strong> - Restreindre le traitement</span></div>
                     </div>
-                    <p class="mt-4">Pour exercer ces droits : <a href="mailto:contact@frecorp.fr" class="text-indigo-400 hover:underline">contact@frecorp.fr</a></p>
+                    <p class="mt-4">Pour exercer ces droits : <a href="mailto:contact@frecorp.fr" class="text-indigo-600 hover:underline">contact@frecorp.fr</a></p>
                 </div>
             </section>
 
-            <hr class="border-white/10">
+            <hr class="border-slate-200">
 
             <section>
-                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <i class="fas fa-envelope text-indigo-400"></i>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <i class="fas fa-envelope text-indigo-600"></i>
                     8. Contact
                 </h2>
-                <div class="text-slate-400">
+                <div class="text-slate-600">
                     <p>Pour toute question sur cette politique ou pour exercer vos droits :</p>
-                    <p class="mt-2"><strong class="text-white">Email général :</strong> <a href="mailto:contact@frecorp.fr" class="text-indigo-400 hover:underline">contact@frecorp.fr</a></p>
-                    <p class="mt-1"><strong class="text-white">Email RGPD dédié :</strong> <a href="mailto:rgpd@frecorp.fr" class="text-indigo-400 hover:underline">rgpd@frecorp.fr</a></p>
-                    <p class="mt-4">Vous pouvez également adresser une réclamation à la CNIL : <a href="https://www.cnil.fr" class="text-indigo-400 hover:underline" target="_blank" rel="noopener">www.cnil.fr</a></p>
+                    <p class="mt-2"><strong class="text-slate-900">Email général :</strong> <a href="mailto:contact@frecorp.fr" class="text-indigo-600 hover:underline">contact@frecorp.fr</a></p>
+                    <p class="mt-1"><strong class="text-slate-900">Email RGPD dédié :</strong> <a href="mailto:rgpd@frecorp.fr" class="text-indigo-600 hover:underline">rgpd@frecorp.fr</a></p>
+                    <p class="mt-4">Vous pouvez également adresser une réclamation à la CNIL : <a href="https://www.cnil.fr" class="text-indigo-600 hover:underline" target="_blank" rel="noopener">www.cnil.fr</a></p>
                 </div>
             </section>
 
-            <div class="pt-4 text-sm text-slate-500">
+            <div class="pt-4 text-sm text-slate-400">
                 <p><i class="fas fa-calendar mr-2"></i>Dernière mise à jour : 9 mai 2026</p>
             </div>
         </div>
     </div>
-</main>
+</section>
 @endsection

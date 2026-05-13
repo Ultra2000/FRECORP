@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.landing')
 
 @section('title', 'Démo FRECORP ERP | Découvrez l\'interface en action')
 @section('meta_description', 'Découvrez FRECORP ERP en action : vidéo de démonstration, screenshots de l\'interface et demandez une démo personnalisée gratuite.')
 @section('og_title', 'Démo FRECORP ERP | Découvrez l\'interface en action')
-@section('og_description', 'Vidéo de démo, screenshots et démo personnalisée gratuite de FRECORP ERP — le logiciel de gestion tout-en-un pour PME.')
+@section('og_description', 'Vidéo de démo, screenshots et démo personnalisée gratuite de FRECORP ERP, le logiciel de gestion tout-en-un pour PME.')
 
 @section('styles')
 <style>
@@ -23,15 +23,15 @@
     {{-- Hero --}}
     <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 px-6">
         <div class="max-w-7xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-400 text-sm font-bold mb-6">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-600 text-sm font-bold mb-6">
                 <i class="fas fa-play-circle"></i>
                 <span>Découvrez FRECORP en action</span>
             </div>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-                <span class="text-white">Explorez l'interface</span><br>
+                <span class="text-slate-900">Explorez l'interface</span><br>
                 <span class="gradient-text">de votre futur ERP</span>
             </h1>
-            <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
                 Vidéo de présentation, captures d'écran de chaque module et formulaire pour demander une démo personnalisée avec notre équipe.
             </p>
         </div>
@@ -40,39 +40,39 @@
     {{-- Video --}}
     <section class="py-12 px-6">
         <div class="max-w-5xl mx-auto relative z-10">
-            <div class="glass-card rounded-3xl overflow-hidden">
-                <div class="video-container bg-slate-900">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800">
-                        <div class="w-24 h-24 bg-indigo-600/20 rounded-full flex items-center justify-center mb-6 cursor-pointer hover:bg-indigo-600/30 transition group">
-                            <i class="fas fa-play text-indigo-400 text-3xl ml-1 group-hover:scale-110 transition"></i>
+            <div class="glass-card glass-card-static overflow-hidden">
+                <div class="video-container bg-slate-100">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-slate-50">
+                        <div class="w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center mb-6 cursor-pointer hover:bg-indigo-200 transition group">
+                            <i class="fas fa-play text-indigo-600 text-3xl ml-1 group-hover:scale-110 transition"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-2">Vidéo de présentation</h3>
-                        <p class="text-slate-400">Durée : 3 minutes</p>
-                        <p class="text-slate-500 text-sm mt-4"><i class="fas fa-info-circle mr-2"></i>Vidéo bientôt disponible</p>
+                        <p class="text-slate-600">Durée : 3 minutes</p>
+                        <p class="text-slate-400 text-sm mt-4"><i class="fas fa-info-circle mr-2"></i>Vidéo bientôt disponible</p>
                     </div>
                 </div>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                 <div class="glass-card p-4 rounded-xl text-center">
-                    <i class="fas fa-cash-register text-indigo-400 text-xl mb-2"></i>
+                    <i class="fas fa-cash-register text-indigo-600 text-xl mb-2"></i>
                     <div class="text-sm font-semibold">Point de Vente</div>
-                    <div class="text-xs text-slate-500">0:00 - 0:45</div>
+                    <div class="text-xs text-slate-400">0:00 - 0:45</div>
                 </div>
                 <div class="glass-card p-4 rounded-xl text-center">
                     <i class="fas fa-boxes-stacked text-purple-400 text-xl mb-2"></i>
                     <div class="text-sm font-semibold">Gestion Stock</div>
-                    <div class="text-xs text-slate-500">0:45 - 1:30</div>
+                    <div class="text-xs text-slate-400">0:45 - 1:30</div>
                 </div>
                 <div class="glass-card p-4 rounded-xl text-center">
                     <i class="fas fa-user-clock text-emerald-400 text-xl mb-2"></i>
                     <div class="text-sm font-semibold">RH & Pointage</div>
-                    <div class="text-xs text-slate-500">1:30 - 2:15</div>
+                    <div class="text-xs text-slate-400">1:30 - 2:15</div>
                 </div>
                 <div class="glass-card p-4 rounded-xl text-center">
                     <i class="fas fa-chart-line text-orange-400 text-xl mb-2"></i>
                     <div class="text-sm font-semibold">Comptabilité</div>
-                    <div class="text-xs text-slate-500">2:15 - 3:00</div>
+                    <div class="text-xs text-slate-400">2:15 - 3:00</div>
                 </div>
             </div>
         </div>
@@ -83,12 +83,12 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-12">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-4">Captures d'écran par module</h2>
-                <p class="text-slate-400">Cliquez sur un module pour voir les screenshots</p>
+                <p class="text-slate-600">Cliquez sur un module pour voir les screenshots</p>
             </div>
 
             <div class="flex flex-wrap justify-center gap-3 mb-10">
                 <button class="module-tab active glass-card px-5 py-3 rounded-xl font-semibold text-sm" data-module="dashboard">
-                    <i class="fas fa-chart-pie mr-2 text-indigo-400"></i>Dashboard
+                    <i class="fas fa-chart-pie mr-2 text-indigo-600"></i>Dashboard
                 </button>
                 <button class="module-tab glass-card px-5 py-3 rounded-xl font-semibold text-sm" data-module="pos">
                     <i class="fas fa-cash-register mr-2 text-emerald-400"></i>Point de Vente
@@ -138,12 +138,12 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         @foreach($cards as $card)
                         <div class="screenshot-card glass-card rounded-2xl overflow-hidden">
-                            <div class="aspect-video bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center">
-                                <i class="fas fa-image text-slate-700 text-4xl"></i>
+                            <div class="aspect-video bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center">
+                                <i class="fas fa-image text-slate-300 text-4xl"></i>
                             </div>
                             <div class="p-4">
                                 <h4 class="font-bold">{{ $card[1] }}</h4>
-                                <p class="text-slate-400 text-sm">{{ $card[2] }}</p>
+                                <p class="text-slate-600 text-sm">{{ $card[2] }}</p>
                             </div>
                         </div>
                         @endforeach
@@ -161,15 +161,15 @@
                 <div class="grid lg:grid-cols-2 gap-12">
                     <div>
                         <h2 class="text-3xl font-bold mb-6">Demandez une démo personnalisée</h2>
-                        <p class="text-slate-400 mb-8">Notre équipe vous contactera sous 24h pour organiser une démonstration adaptée à votre secteur d'activité.</p>
+                        <p class="text-slate-600 mb-8">Notre équipe vous contactera sous 24h pour organiser une démonstration adaptée à votre secteur d'activité.</p>
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
                                 <div class="w-10 h-10 bg-indigo-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-video text-indigo-400"></i>
+                                    <i class="fas fa-video text-indigo-600"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold mb-1">Démo visio 30 min</h4>
-                                    <p class="text-slate-400 text-sm">Présentation personnalisée selon vos besoins</p>
+                                    <p class="text-slate-600 text-sm">Présentation personnalisée selon vos besoins</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -178,7 +178,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold mb-1">Session Q&A</h4>
-                                    <p class="text-slate-400 text-sm">Posez toutes vos questions à notre expert</p>
+                                    <p class="text-slate-600 text-sm">Posez toutes vos questions à notre expert</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -187,7 +187,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold mb-1">100% Gratuit</h4>
-                                    <p class="text-slate-400 text-sm">Sans engagement, sans carte bancaire</p>
+                                    <p class="text-slate-600 text-sm">Sans engagement, sans carte bancaire</p>
                                 </div>
                             </div>
                         </div>
@@ -203,23 +203,23 @@
 
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Nom complet *</label>
-                                <input type="text" name="nom" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:border-indigo-500 focus:outline-none transition" placeholder="Jean Dupont">
+                                <input type="text" name="nom" required class="w-full px-4 py-3 bg-white/5 border border-slate-200 rounded-xl focus:border-indigo-500 focus:outline-none transition" placeholder="Jean Dupont">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Email professionnel *</label>
-                                <input type="email" name="email" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:border-indigo-500 focus:outline-none transition" placeholder="jean@entreprise.fr">
+                                <input type="email" name="email" required class="w-full px-4 py-3 bg-white/5 border border-slate-200 rounded-xl focus:border-indigo-500 focus:outline-none transition" placeholder="jean@entreprise.fr">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Téléphone</label>
-                                <input type="tel" name="telephone" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:border-indigo-500 focus:outline-none transition" placeholder="06 12 34 56 78">
+                                <input type="tel" name="telephone" class="w-full px-4 py-3 bg-white/5 border border-slate-200 rounded-xl focus:border-indigo-500 focus:outline-none transition" placeholder="06 12 34 56 78">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Nom de l'entreprise *</label>
-                                <input type="text" name="entreprise" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:border-indigo-500 focus:outline-none transition" placeholder="Ma Société SARL">
+                                <input type="text" name="entreprise" required class="w-full px-4 py-3 bg-white/5 border border-slate-200 rounded-xl focus:border-indigo-500 focus:outline-none transition" placeholder="Ma Société SARL">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Secteur d'activité</label>
-                                <select name="secteur" class="w-full px-4 py-3 bg-slate-800 border border-white/10 rounded-xl focus:border-indigo-500 focus:outline-none transition text-slate-300">
+                                <select name="secteur" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:border-indigo-500 focus:outline-none transition text-slate-700">
                                     <option value="">Sélectionnez...</option>
                                     <option>Commerce / Retail</option>
                                     <option>Restauration</option>
@@ -231,7 +231,7 @@
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Nombre d'employés</label>
-                                <select name="employes" class="w-full px-4 py-3 bg-slate-800 border border-white/10 rounded-xl focus:border-indigo-500 focus:outline-none transition text-slate-300">
+                                <select name="employes" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:border-indigo-500 focus:outline-none transition text-slate-700">
                                     <option value="">Sélectionnez...</option>
                                     <option>1 - 5</option>
                                     <option>6 - 20</option>
@@ -239,11 +239,11 @@
                                     <option>Plus de 50</option>
                                 </select>
                             </div>
-                            <button type="submit" class="w-full btn-primary py-4 rounded-xl font-bold text-white flex items-center justify-center gap-2">
+                            <button type="submit" class="w-full btn-primary py-4 rounded-xl font-bold text-slate-900 flex items-center justify-center gap-2">
                                 <span>Demander ma démo gratuite</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
-                            <p class="text-center text-slate-500 text-xs">
+                            <p class="text-center text-slate-400 text-xs">
                                 <i class="fas fa-lock mr-1"></i>Vos données sont protégées et ne seront jamais partagées
                             </p>
                         </form>
@@ -258,12 +258,12 @@
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <div class="glass-card p-12 rounded-3xl bg-gradient-to-br from-indigo-900/30 to-purple-900/30 border-indigo-500/20">
                 <h2 class="text-3xl font-bold mb-4">Préférez-vous tester par vous-même ?</h2>
-                <p class="text-slate-400 mb-8">Créez votre compte gratuit et explorez FRECORP sans engagement pendant 1 mois.</p>
+                <p class="text-slate-600 mb-8">Créez votre compte gratuit et explorez FRECORP sans engagement pendant 1 mois.</p>
                 <a href="https://app.frecorp.fr/admin/register" class="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-indigo-50 transition shadow-xl">
                     <span>Créer mon compte gratuit</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
-                <p class="text-slate-500 text-sm mt-4"><i class="fas fa-credit-card mr-1"></i> Aucune carte bancaire requise</p>
+                <p class="text-slate-400 text-sm mt-4"><i class="fas fa-credit-card mr-1"></i> Aucune carte bancaire requise</p>
             </div>
         </div>
     </section>
@@ -286,7 +286,7 @@
     // Success banner on redirect back
     if (window.location.search.includes('success=true')) {
         const banner = document.createElement('div');
-        banner.className = 'fixed top-24 left-1/2 transform -translate-x-1/2 z-50 bg-green-600 text-white px-8 py-4 rounded-2xl shadow-2xl flex items-center gap-3';
+        banner.className = 'fixed top-24 left-1/2 transform -translate-x-1/2 z-50 bg-green-600 text-slate-900 px-8 py-4 rounded-2xl shadow-2xl flex items-center gap-3';
         banner.innerHTML = '<i class="fas fa-check-circle text-2xl"></i><div><strong>Demande envoyée !</strong><br><span class="text-sm">Notre équipe vous contactera sous 24h.</span></div>';
         document.body.appendChild(banner);
         setTimeout(() => { banner.style.transition='opacity .5s'; banner.style.opacity='0'; setTimeout(()=>banner.remove(),500); }, 5000);
