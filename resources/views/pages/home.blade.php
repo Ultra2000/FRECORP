@@ -355,7 +355,7 @@
 {{-- ═══════════════════════════════════════════════════════════════════════
      AVANT / APRÈS
 ══════════════════════════════════════════════════════════════════════════ --}}
-<section class="py-24 lg:py-32 px-4 sm:px-6">
+<section class="py-24 lg:py-32 px-4 sm:px-6 overflow-hidden">
     <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
             <h2 class="h-section mb-6">
@@ -367,11 +367,14 @@
             </p>
         </div>
 
-        <div class="relative fade-in">
-            <img src="/images/avant_apres.png"
-                 alt="Comparaison Avant FRECORP (saisie manuelle, fichiers dispersés) vs Après FRECORP (automatisation, données fiables, conformité 2026)"
-                 class="w-full h-auto object-contain relative z-10">
-            <div class="absolute -inset-8 -z-10 opacity-30 pointer-events-none">
+        <div class="relative fade-in -mx-4 sm:-mx-6 lg:-mx-16">
+            <div class="relative" style="mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); mask-composite: intersect; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); -webkit-mask-composite: source-in;">
+                <img src="/images/avant_apres.png"
+                     alt="Comparaison Avant FRECORP (saisie manuelle, fichiers dispersés) vs Après FRECORP (automatisation, données fiables, conformité 2026)"
+                     class="w-full h-auto object-contain relative z-10"
+                     style="mix-blend-mode: multiply;">
+            </div>
+            <div class="absolute -inset-12 -z-10 opacity-20 pointer-events-none">
                 <div class="absolute inset-0 gradient-bg blur-3xl rounded-full"></div>
             </div>
         </div>
