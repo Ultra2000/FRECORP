@@ -85,10 +85,10 @@
 
         /* Typographie */
         .h-hero {
-            font-size: clamp(2rem, 4.5vw, 3.5rem);
+            font-size: clamp(1.55rem, 4.5vw, 3.5rem);
             font-weight: 900;
             letter-spacing: -0.035em;
-            line-height: 1.05;
+            line-height: 1.08;
         }
         .h-section {
             font-size: clamp(2rem, 4vw, 3rem);
