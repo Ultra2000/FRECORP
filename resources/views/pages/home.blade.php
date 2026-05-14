@@ -21,7 +21,7 @@
 {{-- ═══════════════════════════════════════════════════════════════════════
      HERO — Bento grid asymétrique
 ══════════════════════════════════════════════════════════════════════════ --}}
-<section class="relative pt-32 lg:pt-40 pb-20 lg:pb-28 px-4 sm:px-6">
+<section class="relative pt-32 lg:pt-40 pb-20 lg:pb-28 px-4 sm:px-6 overflow-hidden">
     <div class="max-w-7xl mx-auto">
 
         <div class="grid grid-cols-1 lg:grid-cols-6 lg:grid-rows-[auto_auto_auto] gap-4 lg:gap-5">
@@ -217,7 +217,7 @@
 {{-- ═══════════════════════════════════════════════════════════════════════
      LE PRODUIT — Illustration centrale + cartes flottantes autour
 ══════════════════════════════════════════════════════════════════════════ --}}
-<section class="py-24 lg:py-32 px-4 sm:px-6">
+<section class="py-24 lg:py-32 px-4 sm:px-6 overflow-hidden">
     <div class="max-w-7xl mx-auto">
 
         {{-- En-tête centré --}}
