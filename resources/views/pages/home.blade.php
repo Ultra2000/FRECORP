@@ -29,27 +29,27 @@
             {{-- ═══════ CARD 1 : HEADLINE (grande, centrée) ═══════ --}}
             <div class="glass-card glass-card-static p-8 lg:p-14 lg:col-span-4 lg:row-span-2 flex flex-col items-center justify-center text-center fade-in">
                 <h1 class="h-hero mb-6" style="text-wrap: balance">
-                    L'ERP nouvelle génération
-                    <span class="gradient-text block">pour PME françaises</span>
+                    {{ __('hero.title') }}
+                    <span class="gradient-text block">{{ __('hero.subtitle') }}</span>
                 </h1>
                 <p class="text-body max-w-xl mb-10">
-                    Stock, facturation, POS, RH, comptabilité. Une suite complète qui remplace vos vieux outils dispersés.
+                    {{ __('hero.description') }}
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-3 justify-center">
                     <a href="https://app.frecorp.fr/admin/register" class="btn-primary">
-                        Commencer gratuitement
+                        {{ __('hero.cta') }}
                         <i class="fas fa-arrow-right text-sm"></i>
                     </a>
                     <a href="{{ route('demo') }}" class="btn-secondary">
                         <i class="fas fa-play text-indigo-500 text-sm"></i>
-                        Voir la démo
+                        {{ __('hero.demo') }}
                     </a>
                 </div>
                 <div class="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-slate-500">
-                    <span class="flex items-center gap-1.5"><i class="fas fa-check text-indigo-500 text-xs"></i>1 mois gratuit</span>
-                    <span class="flex items-center gap-1.5"><i class="fas fa-check text-indigo-500 text-xs"></i>Sans carte bancaire</span>
-                    <span class="flex items-center gap-1.5"><i class="fas fa-check text-indigo-500 text-xs"></i>🇫🇷 Hébergé en France</span>
+                    <span class="flex items-center gap-1.5"><i class="fas fa-check text-indigo-500 text-xs"></i>{{ __('hero.free_month') }}</span>
+                    <span class="flex items-center gap-1.5"><i class="fas fa-check text-indigo-500 text-xs"></i>{{ __('hero.no_card') }}</span>
+                    <span class="flex items-center gap-1.5"><i class="fas fa-check text-indigo-500 text-xs"></i>{{ __('hero.hosted_france') }}</span>
                 </div>
             </div>
 
@@ -74,14 +74,14 @@
             <div class="soft-card p-6 lg:col-span-2 fade-in overflow-hidden flex flex-col justify-center gap-3">
                 @php
                     $marqueeModules = [
-                        ['cash-register',     'Point de vente',  'indigo'],
-                        ['boxes-stacked',     'Stock',           'violet'],
-                        ['file-invoice',      'Facturation',     'indigo'],
-                        ['truck-fast',        'Achats',          'violet'],
-                        ['users',             'RH & Paie',       'indigo'],
-                        ['calculator',        'Comptabilité',    'violet'],
-                        ['file-export',       'Factur-X',        'indigo'],
-                        ['file-signature',    'Devis',           'violet'],
+                        ['cash-register',     __('module.pos'),        'indigo'],
+                        ['boxes-stacked',     __('module.stock'),      'violet'],
+                        ['file-invoice',      __('module.billing'),    'indigo'],
+                        ['truck-fast',        __('module.purchases'),  'violet'],
+                        ['users',             __('module.hr'),         'indigo'],
+                        ['calculator',        __('module.accounting'), 'violet'],
+                        ['file-export',       'Factur-X',              'indigo'],
+                        ['file-signature',    'Devis',                 'violet'],
                     ];
                 @endphp
 
@@ -109,19 +109,19 @@
                     </div>
                 </div>
 
-                <div class="text-center text-xs text-slate-400 mt-1">8 modules connectés en un seul outil</div>
+                <div class="text-center text-xs text-slate-400 mt-1">{{ __('marquee.modules_count') }}</div>
             </div>
 
             {{-- ═══════ CARD 5 : ACTIVITÉ EN DIRECT (bottom 4 cols) ═══════ --}}
             <div class="glass-card glass-card-static p-7 lg:col-span-4 fade-in">
                 <div class="flex items-center justify-between mb-5">
                     <div>
-                        <div class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">Aujourd'hui</div>
-                        <div class="text-base font-bold text-slate-900">Votre business, en temps réel</div>
+                        <div class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">{{ __('activity.today') }}</div>
+                        <div class="text-base font-bold text-slate-900">{{ __('activity.realtime') }}</div>
                     </div>
                     <span class="flex items-center gap-2 text-xs text-emerald-600 font-semibold">
                         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        En direct
+                        {{ __('activity.live') }}
                     </span>
                 </div>
 
@@ -131,8 +131,8 @@
                             <i class="fas fa-check text-sm"></i>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <div class="text-xs font-semibold text-slate-900 truncate">Devis #2384 accepté</div>
-                            <div class="text-[11px] text-slate-400">il y a 4 min</div>
+                            <div class="text-xs font-semibold text-slate-900 truncate">{{ __('activity.quote_accepted') }}</div>
+                            <div class="text-[11px] text-slate-400">{{ __('activity.ago_4min') }}</div>
                         </div>
                         <div class="text-xs font-bold text-slate-700 flex-shrink-0">1 240€</div>
                     </div>
@@ -142,8 +142,8 @@
                             <i class="fas fa-file-invoice text-sm"></i>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <div class="text-xs font-semibold text-slate-900 truncate">Facture FR-0512</div>
-                            <div class="text-[11px] text-slate-400">il y a 1 h</div>
+                            <div class="text-xs font-semibold text-slate-900 truncate">{{ __('activity.invoice') }}</div>
+                            <div class="text-[11px] text-slate-400">{{ __('activity.ago_1h') }}</div>
                         </div>
                         <div class="text-xs font-bold text-slate-700 flex-shrink-0">3 980€</div>
                     </div>
@@ -153,8 +153,8 @@
                             <i class="fas fa-cart-shopping text-sm"></i>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <div class="text-xs font-semibold text-slate-900 truncate">12 ventes POS</div>
-                            <div class="text-[11px] text-slate-400">aujourd'hui</div>
+                            <div class="text-xs font-semibold text-slate-900 truncate">{{ __('activity.pos_sales') }}</div>
+                            <div class="text-[11px] text-slate-400">{{ __('activity.today_lower') }}</div>
                         </div>
                         <div class="text-xs font-bold text-slate-700 flex-shrink-0">2 410€</div>
                     </div>
@@ -170,7 +170,7 @@
 ══════════════════════════════════════════════════════════════════════════ --}}
 <section class="py-12 px-4 sm:px-6 border-y border-slate-200/80 bg-white/40 backdrop-blur-sm">
     <div class="max-w-7xl mx-auto text-center fade-in">
-        <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-8">Ils nous font confiance</p>
+        <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-8">{{ __('trust.title') }}</p>
         <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-16 text-slate-400 text-xl font-semibold">
             <span class="opacity-60 hover:opacity-100 transition">ACME Corp</span>
             <span class="opacity-60 hover:opacity-100 transition">Boulangerie Léon</span>
@@ -189,14 +189,13 @@
         <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
             <span class="pill mb-6">
                 <i class="fas fa-bolt"></i>
-                Intelligence artificielle
+                {{ __('ia.title') }}
             </span>
             <h2 class="h-section mb-6">
-                Vos factures lues, comprises,
-                <span class="gradient-text">enregistrées</span>
+                {{ __('ia.headline') }}
             </h2>
             <p class="text-body">
-                Glissez un PDF. Notre IA extrait les lignes, les montants, la TVA, le fournisseur. Une seule validation, et c'est dans votre comptabilité.
+                {{ __('ia.description') }}
             </p>
         </div>
 
@@ -224,14 +223,13 @@
         <div class="text-center max-w-3xl mx-auto mb-14 fade-in">
             <span class="pill mb-6">
                 <i class="fas fa-laptop"></i>
-                Le produit
+                {{ __('product.title') }}
             </span>
             <h2 class="h-section mb-6">
-                Tout votre business,
-                <span class="gradient-text">en un coup d'œil</span>
+                {{ __('product.headline') }}
             </h2>
             <p class="text-body">
-                Un seul écran pour vos ventes, votre stock, vos factures et votre trésorerie. Accessible partout, optimisé mobile.
+                {{ __('product.description') }}
             </p>
         </div>
 
@@ -244,16 +242,16 @@
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 mb-4">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="font-semibold text-slate-900 mb-1">Dashboard unifié</div>
-                    <div class="text-sm text-slate-500 leading-relaxed">CA, marge, ventes, trésorerie : tout en temps réel.</div>
+                    <div class="font-semibold text-slate-900 mb-1">{{ __('product.dashboard') }}</div>
+                    <div class="text-sm text-slate-500 leading-relaxed">{{ __('product.dashboard_desc') }}</div>
                 </div>
                 <div class="soft-card p-5 fade-in overflow-hidden">
                     <div class="w-10 h-10 rounded-xl bg-violet-50 border border-violet-100 flex items-center justify-center text-violet-600 mb-4">
                         <i class="fas fa-store"></i>
                     </div>
-                    <div class="font-semibold text-slate-900 mb-3">Tous les métiers</div>
+                    <div class="font-semibold text-slate-900 mb-3">{{ __('product.all_trades') }}</div>
                     @php
-                        $metiers = ['Boulangerie', 'Boutique', 'Café', 'Restaurant', 'Menuiserie', 'Atelier', 'Garage', 'Coiffeur', 'Agence', 'Cabinet', 'E-commerce', 'Artisan'];
+                        $metiers = [__('trades.bakery'), __('trades.shop'), __('trades.cafe'), __('trades.restaurant'), __('trades.woodworking'), __('trades.workshop'), __('trades.garage'), __('trades.hairdresser'), __('trades.agency'), __('trades.office'), __('trades.ecommerce'), __('trades.artisan')];
                     @endphp
                     <div class="space-y-2 -mx-5">
                         {{-- Ligne 1 (scroll gauche) --}}
@@ -292,15 +290,15 @@
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 mb-4">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <div class="font-semibold text-slate-900 mb-1">Sync instantanée</div>
-                    <div class="text-sm text-slate-500 leading-relaxed">Une vente, un stock à jour. Une facture, une écriture.</div>
+                    <div class="font-semibold text-slate-900 mb-1">{{ __('product.sync') }}</div>
+                    <div class="text-sm text-slate-500 leading-relaxed">{{ __('product.sync_desc') }}</div>
                 </div>
                 <div class="soft-card p-5 fade-in">
                     <div class="w-10 h-10 rounded-xl bg-violet-50 border border-violet-100 flex items-center justify-center text-violet-600 mb-4">
                         <i class="fas fa-shield-halved"></i>
                     </div>
-                    <div class="font-semibold text-slate-900 mb-1">🇫🇷 Hébergé France</div>
-                    <div class="text-sm text-slate-500 leading-relaxed">Chiffrement TLS, RGPD by design, sauvegardes quotidiennes.</div>
+                    <div class="font-semibold text-slate-900 mb-1">{{ __('product.hosted') }}</div>
+                    <div class="text-sm text-slate-500 leading-relaxed">{{ __('product.hosted_desc') }}</div>
                 </div>
             </div>
 
@@ -316,26 +314,25 @@
         <div class="text-center max-w-3xl mx-auto mb-20 fade-in">
             <span class="pill mb-6">
                 <i class="fas fa-cube"></i>
-                Une suite complète
+                {{ __('features.title') }}
             </span>
             <h2 class="h-section mb-6">
-                Tout ce qu'il faut.
-                <span class="gradient-text block">Rien de plus.</span>
+                {{ __('features.headline') }}
             </h2>
             <p class="text-body">
-                Six modules conçus pour fonctionner ensemble. Activez ceux dont vous avez besoin, désactivez les autres.
+                {{ __('features.description') }}
             </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             @php
                 $modules = [
-                    ['cash-register',  'Point de Vente',  'POS connecté au stock en temps réel. Tactile, rapide, hors ligne.'],
-                    ['boxes-stacked',  'Multi-Entrepôts', 'Stocks, inventaires, transferts. Codes-barres et seuils d\'alerte.'],
-                    ['file-invoice',   'Facturation',     'Devis, factures, Factur-X EN16931. Acceptation client en 1 clic.'],
-                    ['truck-fast',     'Achats',          'Commandes fournisseurs, réceptions, import IA des factures.'],
-                    ['users',          'Ressources Humaines', 'Pointage QR code anti-fraude, congés, paie simplifiée.'],
-                    ['calculator',     'Comptabilité',    'Plan comptable, écritures auto, balance, exports FEC.'],
+                    ['cash-register',  __('module.pos'),        __('module.pos_desc')],
+                    ['boxes-stacked',  __('module.stock'),      __('module.stock_desc')],
+                    ['file-invoice',   __('module.billing'),    __('module.billing_desc')],
+                    ['truck-fast',     __('module.purchases'),  __('module.purchases_desc')],
+                    ['users',          __('module.hr'),         __('module.hr_desc')],
+                    ['calculator',     __('module.accounting'), __('module.accounting_desc')],
                 ];
             @endphp
 
@@ -359,11 +356,10 @@
     <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
             <h2 class="h-section mb-6">
-                <span class="gradient-text">3 heures par semaine.</span>
-                Voilà ce que vous récupérez.
+                {{ __('before_after.title') }}
             </h2>
             <p class="text-body">
-                Du chaos papier au tableau de bord unifié. La même semaine de travail, deux mondes différents.
+                {{ __('before_after.description') }}
             </p>
         </div>
 
@@ -389,53 +385,52 @@
     <div class="max-w-5xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
             <h2 class="h-section mb-6">
-                <span class="gradient-text">Gratuit</span> pendant la phase de lancement
+                {{ __('pricing.title') }}
             </h2>
             <p class="text-body">
-                Toute la suite FRECORP, sans coût et sans engagement.
-                Les early adopters bénéficieront d'un tarif préférentiel à vie quand la grille tarifaire sera publiée.
+                {{ __('pricing.description') }}
             </p>
         </div>
 
         <div class="glass-card p-10 lg:p-14 text-center fade-in">
             <div class="pill mb-6">
                 <i class="fas fa-rocket"></i>
-                Programme early adopter
+                {{ __('pricing.plan_name') }}
             </div>
 
-            <div class="text-6xl lg:text-7xl font-black gradient-text mb-3" style="letter-spacing:-.04em;line-height:1">0€</div>
-            <p class="text-lg text-slate-700 font-semibold mb-2">Utilisation illimitée pendant toute la bêta</p>
+            <div class="text-6xl lg:text-7xl font-black gradient-text mb-3" style="letter-spacing:-.04em;line-height:1">{{ __('pricing.price') }}</div>
+            <p class="text-lg text-slate-700 font-semibold mb-2">{{ __('pricing.period') }}</p>
             <p class="text-sm text-slate-500 max-w-md mx-auto mb-10">
-                Vous serez prévenu(e) par email <strong class="text-slate-700">au moins 30 jours avant</strong> la mise en place des tarifs. Aucun prélèvement automatique, aucune carte bancaire demandée.
+                {{ __('pricing.notice') }}
             </p>
 
             <a href="https://app.frecorp.fr/admin/register" class="btn-primary inline-flex">
-                Rejoindre la bêta
+                {{ __('pricing.cta') }}
                 <i class="fas fa-arrow-right text-sm"></i>
             </a>
 
             <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 text-left">
                 <div class="flex items-start gap-2 text-sm">
                     <i class="fas fa-check text-indigo-500 mt-1"></i>
-                    <span class="text-slate-600">Tous les modules</span>
+                    <span class="text-slate-600">{{ __('pricing.feature_1') }}</span>
                 </div>
                 <div class="flex items-start gap-2 text-sm">
                     <i class="fas fa-check text-indigo-500 mt-1"></i>
-                    <span class="text-slate-600">Utilisateurs illimités</span>
+                    <span class="text-slate-600">{{ __('pricing.feature_2') }}</span>
                 </div>
                 <div class="flex items-start gap-2 text-sm">
                     <i class="fas fa-check text-indigo-500 mt-1"></i>
-                    <span class="text-slate-600">Support par email</span>
+                    <span class="text-slate-600">{{ __('pricing.feature_3') }}</span>
                 </div>
                 <div class="flex items-start gap-2 text-sm">
                     <i class="fas fa-check text-indigo-500 mt-1"></i>
-                    <span class="text-slate-600">Tarif préférentiel à vie</span>
+                    <span class="text-slate-600">{{ __('pricing.feature_4') }}</span>
                 </div>
             </div>
         </div>
 
         <p class="text-center text-xs text-slate-400 mt-6">
-            Pas d'engagement. Vous pouvez exporter toutes vos données et résilier à tout moment.
+            {{ __('pricing.no_commitment') }}
         </p>
     </div>
 </section>
@@ -448,11 +443,11 @@
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 mb-12 fade-in">
             <div>
-                <h2 class="h-section mb-3">Le blog FRECORP</h2>
-                <p class="text-body">Tout savoir sur Factur-X, la réforme 2026, et la gestion moderne.</p>
+                <h2 class="h-section mb-3">{{ __('blog_teaser.title') }}</h2>
+                <p class="text-body">{{ __('blog_teaser.description') }}</p>
             </div>
             <a href="{{ route('blog.index') }}" class="btn-secondary btn-sm">
-                Tous les articles
+                {{ __('blog_teaser.all_articles') }}
                 <i class="fas fa-arrow-right text-xs"></i>
             </a>
         </div>
@@ -490,19 +485,19 @@
             </div>
             <div class="relative">
                 <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6" style="letter-spacing:-.03em;line-height:1">
-                    Reprenez le contrôle.
+                    {{ __('cta.title') }}
                 </h2>
                 <p class="text-lg lg:text-xl text-white/80 max-w-2xl mx-auto mb-10">
-                    Rejoignez les PME françaises qui ont arrêté de perdre du temps sur leurs factures.
+                    {{ __('cta.description') }}
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://app.frecorp.fr/admin/register" class="btn-secondary" style="background:white;color:#0f172a">
-                        Démarrer gratuitement
+                        {{ __('cta.start') }}
                         <i class="fas fa-arrow-right text-sm"></i>
                     </a>
                     <a href="{{ route('demo') }}" class="inline-flex items-center justify-center gap-2 h-[58px] px-7 rounded-2xl font-semibold border border-white/30 text-white hover:bg-white/10 transition">
                         <i class="fas fa-play text-sm"></i>
-                        Voir la démo
+                        {{ __('cta.demo') }}
                     </a>
                 </div>
             </div>

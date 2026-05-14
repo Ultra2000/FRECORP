@@ -14,27 +14,27 @@
             <div class="flex-1">
                 <h3 id="cookie-banner-title" class="text-white font-bold text-lg mb-2 flex items-center gap-2">
                     <i class="fas fa-cookie-bite text-indigo-400"></i>
-                    Vos préférences cookies
+                    {{ __('cookie.title') }}
                 </h3>
                 <p id="cookie-banner-desc" class="text-slate-400 text-sm">
-                    Nous utilisons des cookies essentiels au fonctionnement du site. Avec votre accord, nous pourrions également utiliser des cookies de mesure d'audience pour améliorer votre expérience. Vous pouvez modifier votre choix à tout moment depuis notre <a href="{{ route('confidentialite') }}" class="text-indigo-400 hover:underline">politique de confidentialité</a>.
+                    {{ __('cookie.description') }} <a href="{{ route('confidentialite') }}" class="text-indigo-400 hover:underline">politique de confidentialité</a>.
                 </p>
             </div>
             <div class="flex flex-col sm:flex-row gap-2 w-full lg:w-auto flex-shrink-0">
                 <button type="button"
                         id="cookie-refuse"
                         class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium transition border border-slate-700">
-                    Tout refuser
+                    {{ __('cookie.reject') }}
                 </button>
                 <button type="button"
                         id="cookie-customize"
                         class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium transition border border-slate-700">
-                    Personnaliser
+                    {{ __('cookie.customize') }}
                 </button>
                 <button type="button"
                         id="cookie-accept"
                         class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white text-sm font-bold transition">
-                    Tout accepter
+                    {{ __('cookie.accept') }}
                 </button>
             </div>
         </div>
@@ -44,21 +44,21 @@
             <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-800/50 cursor-not-allowed opacity-80">
                 <input type="checkbox" checked disabled class="mt-1 accent-indigo-500">
                 <div>
-                    <div class="text-white font-semibold text-sm">Cookies essentiels</div>
-                    <div class="text-slate-400 text-xs">Nécessaires au fonctionnement (session, sécurité). Toujours actifs.</div>
+                    <div class="text-white font-semibold text-sm">{{ __('cookie.essential') }}</div>
+                    <div class="text-slate-400 text-xs">{{ __('cookie.essential_desc') }}</div>
                 </div>
             </label>
             <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-800/50 cursor-pointer hover:bg-slate-800/70 transition">
                 <input type="checkbox" id="cookie-analytics" class="mt-1 accent-indigo-500">
                 <div>
-                    <div class="text-white font-semibold text-sm">Mesure d'audience</div>
-                    <div class="text-slate-400 text-xs">Statistiques d'utilisation anonymisées pour améliorer le service.</div>
+                    <div class="text-white font-semibold text-sm">{{ __('cookie.analytics') }}</div>
+                    <div class="text-slate-400 text-xs">{{ __('cookie.analytics_desc') }}</div>
                 </div>
             </label>
             <button type="button"
                     id="cookie-save"
                     class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white text-sm font-bold transition">
-                Enregistrer mes préférences
+                {{ __('cookie.save') }}
             </button>
         </div>
     </div>

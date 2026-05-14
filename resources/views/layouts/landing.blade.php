@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth overflow-x-hidden">
+<html lang="{{ app()->getLocale() }}" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -308,21 +308,27 @@
 
             {{-- Nav desktop --}}
             <div class="hidden lg:flex items-center gap-1">
-                <a href="{{ route('home') }}#fonctionnalites" class="nav-link text-sm">Fonctionnalités</a>
-                <a href="{{ route('home') }}#flux-ia" class="nav-link text-sm">IA</a>
-                <a href="{{ route('home') }}#pricing" class="nav-link text-sm">Tarifs</a>
-                <a href="{{ route('blog.index') }}" class="nav-link text-sm">Blog</a>
-                <a href="https://app.frecorp.fr/convertir-facture" class="nav-link text-sm">Convertisseur</a>
+                <a href="{{ route('home') }}#fonctionnalites" class="nav-link text-sm">{{ __('nav.features') }}</a>
+                <a href="{{ route('home') }}#flux-ia" class="nav-link text-sm">{{ __('nav.ia') }}</a>
+                <a href="{{ route('home') }}#pricing" class="nav-link text-sm">{{ __('nav.pricing') }}</a>
+                <a href="{{ route('blog.index') }}" class="nav-link text-sm">{{ __('nav.blog') }}</a>
+                <a href="https://app.frecorp.fr/convertir-facture" class="nav-link text-sm">{{ __('nav.converter') }}</a>
             </div>
 
             {{-- Actions --}}
             <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                {{-- Language switcher --}}
+                <div class="hidden sm:flex items-center gap-1.5">
+                    <a href="{{ route('locale.switch', 'fr') }}" class="text-sm font-medium {{ app()->getLocale() === 'fr' ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-500 hover:text-slate-700' }}">FR</a>
+                    <span class="text-slate-300">|</span>
+                    <a href="{{ route('locale.switch', 'en') }}" class="text-sm font-medium {{ app()->getLocale() === 'en' ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-500 hover:text-slate-700' }}">EN</a>
+                </div>
                 <a href="https://app.frecorp.fr/admin/login" class="hidden sm:inline-flex nav-link text-sm font-medium">
-                    Connexion
+                    {{ __('nav.login') }}
                 </a>
                 <a href="https://app.frecorp.fr/admin/register" class="btn-primary btn-sm">
-                    <span class="hidden sm:inline">Essai gratuit</span>
-                    <span class="sm:hidden">Essai</span>
+                    <span class="hidden sm:inline">{{ __('nav.trial') }}</span>
+                    <span class="sm:hidden">{{ __('nav.trial_short') }}</span>
                 </a>
                 <button id="mobile-menu-toggle" class="mobile-menu-btn lg:hidden flex items-center justify-center" aria-label="Menu" aria-expanded="false">
                     <i class="fas fa-bars text-base" id="menu-icon"></i>
@@ -333,15 +339,22 @@
         {{-- Menu mobile --}}
         <div id="mobile-menu" class="mobile-menu lg:hidden absolute top-full left-0 right-0 px-4 sm:px-6">
             <div class="flex flex-col space-y-1">
-                <a href="{{ route('home') }}#fonctionnalites" class="mobile-link"><i class="fas fa-cube"></i><span>Fonctionnalités</span></a>
-                <a href="{{ route('home') }}#flux-ia" class="mobile-link"><i class="fas fa-bolt"></i><span>IA</span></a>
-                <a href="{{ route('home') }}#pricing" class="mobile-link"><i class="fas fa-tag"></i><span>Tarifs</span></a>
-                <a href="{{ route('blog.index') }}" class="mobile-link"><i class="fas fa-pen-nib"></i><span>Blog</span></a>
-                <a href="https://app.frecorp.fr/convertir-facture" class="mobile-link"><i class="fas fa-wand-magic-sparkles"></i><span>Convertisseur</span></a>
+                <a href="{{ route('home') }}#fonctionnalites" class="mobile-link"><i class="fas fa-cube"></i><span>{{ __('nav.features') }}</span></a>
+                <a href="{{ route('home') }}#flux-ia" class="mobile-link"><i class="fas fa-bolt"></i><span>{{ __('nav.ia') }}</span></a>
+                <a href="{{ route('home') }}#pricing" class="mobile-link"><i class="fas fa-tag"></i><span>{{ __('nav.pricing') }}</span></a>
+                <a href="{{ route('blog.index') }}" class="mobile-link"><i class="fas fa-pen-nib"></i><span>{{ __('nav.blog') }}</span></a>
+                <a href="https://app.frecorp.fr/convertir-facture" class="mobile-link"><i class="fas fa-wand-magic-sparkles"></i><span>{{ __('nav.converter') }}</span></a>
                 <div class="h-px bg-slate-200 my-3"></div>
-                <a href="https://app.frecorp.fr/admin/login" class="mobile-link"><i class="fas fa-arrow-right-to-bracket"></i><span>Connexion</span></a>
+                {{-- Mobile language switcher --}}
+                <div class="flex items-center gap-2 px-1 py-2">
+                    <a href="{{ route('locale.switch', 'fr') }}" class="text-sm font-medium {{ app()->getLocale() === 'fr' ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-500 hover:text-slate-700' }}">FR</a>
+                    <span class="text-slate-300">|</span>
+                    <a href="{{ route('locale.switch', 'en') }}" class="text-sm font-medium {{ app()->getLocale() === 'en' ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-500 hover:text-slate-700' }}">EN</a>
+                </div>
+                <div class="h-px bg-slate-200 my-3"></div>
+                <a href="https://app.frecorp.fr/admin/login" class="mobile-link"><i class="fas fa-arrow-right-to-bracket"></i><span>{{ __('nav.login') }}</span></a>
                 <a href="https://app.frecorp.fr/admin/register" class="btn-primary btn-sm mt-2 justify-center">
-                    Démarrer l'essai gratuit
+                    {{ __('nav.start_trial') }}
                 </a>
             </div>
         </div>
@@ -361,37 +374,37 @@
                 <p class="text-slate-500 text-sm leading-relaxed">L'ERP nouvelle génération pour PME françaises. Simple, moderne, IA-native.</p>
             </div>
             <div>
-                <h5 class="text-slate-900 font-semibold mb-5 text-sm">Produit</h5>
+                <h5 class="text-slate-900 font-semibold mb-5 text-sm">{{ __('footer.product') }}</h5>
                 <ul class="space-y-3 text-sm text-slate-500">
-                    <li><a href="{{ route('home') }}#fonctionnalites" class="hover:text-indigo-600 transition">Fonctionnalités</a></li>
-                    <li><a href="{{ route('home') }}#pricing" class="hover:text-indigo-600 transition">Tarifs</a></li>
-                    <li><a href="{{ route('demo') }}" class="hover:text-indigo-600 transition">Démo</a></li>
+                    <li><a href="{{ route('home') }}#fonctionnalites" class="hover:text-indigo-600 transition">{{ __('nav.features') }}</a></li>
+                    <li><a href="{{ route('home') }}#pricing" class="hover:text-indigo-600 transition">{{ __('nav.pricing') }}</a></li>
+                    <li><a href="{{ route('demo') }}" class="hover:text-indigo-600 transition">{{ __('nav.demo') }}</a></li>
                     <li><a href="{{ route('roadmap') }}" class="hover:text-indigo-600 transition">Roadmap</a></li>
                     <li><a href="https://app.frecorp.fr/convertir-facture" class="hover:text-indigo-600 transition">Convertisseur Factur-X</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="text-slate-900 font-semibold mb-5 text-sm">Ressources</h5>
+                <h5 class="text-slate-900 font-semibold mb-5 text-sm">{{ __('footer.resources') }}</h5>
                 <ul class="space-y-3 text-sm text-slate-500">
-                    <li><a href="{{ route('blog.index') }}" class="hover:text-indigo-600 transition">Blog</a></li>
-                    <li><a href="{{ route('blog.index') }}?categorie=reform" class="hover:text-indigo-600 transition">Réforme Factur-X</a></li>
-                    <li><a href="{{ route('blog.index') }}?categorie=tutorial" class="hover:text-indigo-600 transition">Tutoriels</a></li>
+                    <li><a href="{{ route('blog.index') }}" class="hover:text-indigo-600 transition">{{ __('footer.blog') }}</a></li>
+                    <li><a href="{{ route('blog.index') }}?categorie=reform" class="hover:text-indigo-600 transition">{{ __('footer.reform') }}</a></li>
+                    <li><a href="{{ route('blog.index') }}?categorie=tutorial" class="hover:text-indigo-600 transition">{{ __('footer.tutorials') }}</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="text-slate-900 font-semibold mb-5 text-sm">Légal</h5>
+                <h5 class="text-slate-900 font-semibold mb-5 text-sm">{{ __('footer.legal') }}</h5>
                 <ul class="space-y-3 text-sm text-slate-500">
-                    <li><a href="{{ route('mentions-legales') }}" class="hover:text-indigo-600 transition">Mentions légales</a></li>
-                    <li><a href="{{ route('cgu') }}" class="hover:text-indigo-600 transition">CGU</a></li>
-                    <li><a href="{{ route('cgv') }}" class="hover:text-indigo-600 transition">CGV</a></li>
-                    <li><a href="{{ route('confidentialite') }}" class="hover:text-indigo-600 transition">Confidentialité</a></li>
-                    <li><a href="{{ route('rgpd') }}" class="hover:text-indigo-600 transition">RGPD</a></li>
-                    <li><a href="#" data-cookie-settings class="hover:text-indigo-600 transition">Gérer mes cookies</a></li>
+                    <li><a href="{{ route('mentions-legales') }}" class="hover:text-indigo-600 transition">{{ __('footer.legal_notices') }}</a></li>
+                    <li><a href="{{ route('cgu') }}" class="hover:text-indigo-600 transition">{{ __('footer.terms') }}</a></li>
+                    <li><a href="{{ route('cgv') }}" class="hover:text-indigo-600 transition">{{ __('footer.sales_terms') }}</a></li>
+                    <li><a href="{{ route('confidentialite') }}" class="hover:text-indigo-600 transition">{{ __('footer.privacy') }}</a></li>
+                    <li><a href="{{ route('rgpd') }}" class="hover:text-indigo-600 transition">{{ __('footer.gdpr') }}</a></li>
+                    <li><a href="#" data-cookie-settings class="hover:text-indigo-600 transition">{{ __('footer.cookies') }}</a></li>
                 </ul>
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 mt-12 border-t border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p class="text-slate-400 text-xs sm:text-sm text-center md:text-left">© {{ date('Y') }} FRECORP. Tous droits réservés. Made with ❤️ in France 🇫🇷</p>
+            <p class="text-slate-400 text-xs sm:text-sm text-center md:text-left">© {{ date('Y') }} FRECORP. {{ __('footer.rights') }}. {{ __('footer.made_in') }}</p>
         </div>
     </footer>
 

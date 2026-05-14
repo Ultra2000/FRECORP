@@ -4,6 +4,15 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
+// Language switcher
+Route::get('/locale/{locale}', function (string $locale) {
+    if (in_array($locale, ['fr', 'en'])) {
+        session(['locale' => $locale]);
+        cookie()->queue(cookie('locale', $locale, 60 * 24 * 365));
+    }
+    return redirect()->back();
+})->name('locale.switch');
+
 // Landing page
 Route::get('/', [PageController::class, 'home'])->name('home');
 

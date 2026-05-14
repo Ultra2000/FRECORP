@@ -10,11 +10,10 @@
         {{-- Header --}}
         <div class="text-center mb-14">
             <h1 class="text-4xl sm:text-5xl font-extrabold mb-4" style="letter-spacing:-.03em">
-                <span class="text-slate-900">Le Blog</span>
-                <span class="gradient-text"> FRECORP</span>
+                <span class="gradient-text">{{ __('blog.title') }}</span>
             </h1>
             <p class="text-slate-600 text-lg max-w-2xl mx-auto">
-                Réforme Factur-X 2026, bonnes pratiques de facturation, et guides d'utilisation de l'ERP.
+                {{ __('blog.description') }}
             </p>
         </div>
 
@@ -22,7 +21,7 @@
         <div class="flex flex-wrap justify-center gap-3 mb-12">
             <a href="{{ route('blog.index') }}"
                class="px-5 py-2 rounded-full text-sm font-semibold transition border {{ !$category ? 'gradient-bg text-white border-transparent shadow-md' : 'bg-white text-slate-600 border-slate-200 hover:border-indigo-300 hover:text-indigo-600' }}">
-                Tous les articles
+                {{ __('blog.all') }}
             </a>
             @foreach($categories as $key => $label)
                 <a href="{{ route('blog.index') }}?categorie={{ $key }}"
@@ -36,7 +35,7 @@
         @if($posts->isEmpty())
             <div class="text-center py-20 text-slate-400">
                 <i class="fas fa-newspaper text-4xl mb-4 block opacity-30"></i>
-                Aucun article publié pour l'instant.
+                {{ __('blog.no_posts') }}
             </div>
         @else
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -65,7 +64,7 @@
                                 <span class="text-xs font-bold px-3 py-1 rounded-full border {{ $colors[$post->category] ?? 'text-slate-600 bg-slate-50 border-slate-200' }}">
                                     {{ $post->categoryLabel() }}
                                 </span>
-                                <span class="text-xs text-slate-400">{{ $post->reading_time }} min</span>
+                                <span class="text-xs text-slate-400">{{ $post->reading_time }} {{ __('blog.min_read') }}</span>
                             </div>
 
                             <h2 class="text-lg font-bold text-slate-900 mb-2 line-clamp-2">
