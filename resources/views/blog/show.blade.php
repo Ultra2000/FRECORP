@@ -27,7 +27,7 @@
     ];
     if ($post->featured_image) $jsonLd['image'] = Storage::url($post->featured_image);
     @endphp
-    <script type="application/ld+json">{{ json_encode($jsonLd, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) }}</script>
+    <script type="application/ld+json">{!! json_encode($jsonLd, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP) !!}</script>
 
     <style>
         .prose h2 { font-size: 1.75rem; font-weight: 800; color: #0f172a; margin: 2.5rem 0 1rem; letter-spacing: -.02em; }
