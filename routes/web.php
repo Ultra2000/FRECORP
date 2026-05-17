@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnalyticsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
@@ -33,3 +34,15 @@ Route::prefix('blog')->name('blog.')->group(function () {
 
 // Sitemap
 Route::get('/sitemap.xml', [PageController::class, 'sitemap'])->name('sitemap');
+
+// Analytics dashboard (password-protected)
+Route::prefix('analytics')->name('analytics.')->group(function () {
+    Route::get('/login', [AnalyticsController::class, 'login'])->name('login');
+    Route::post('/login', [AnalyticsController::class, 'authenticate'])->name('authenticate');
+    Route::get('/logout', [AnalyticsController::class, 'logout'])->name('logout');
+    Route::get('/', [AnalyticsController::class, 'dashboard'])
+        ->name('dashboard')
+        ->middleware('analytics.auth');
+    // Conversion tracking endpoint (called via JS)
+    Route::post('/conversion', [AnalyticsController::class, 'trackConversion'])->name('conversion');
+});

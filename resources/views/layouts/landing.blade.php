@@ -456,6 +456,32 @@
 
     @include('partials.cookie-banner')
 
+    {{-- Conversion tracking --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href*="register"], a[href*="essai"], a[data-conversion]').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    var type = el.getAttribute('data-conversion') || 'trial';
+                    fetch('/analytics/conversion', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
+                        body: JSON.stringify({ type: type, page: window.location.pathname })
+                    }).catch(function() {});
+                });
+            });
+            // Track demo form submissions
+            document.querySelectorAll('form[action*="demo"]').forEach(function(form) {
+                form.addEventListener('submit', function() {
+                    fetch('/analytics/conversion', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
+                        body: JSON.stringify({ type: 'demo', page: window.location.pathname })
+                    }).catch(function() {});
+                });
+            });
+        });
+    </script>
+
     @yield('scripts')
 </body>
 </html>
