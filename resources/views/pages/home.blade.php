@@ -55,9 +55,12 @@
 
             {{-- ═══════ CARD 2 : ILLUSTRATION (top right) ═══════ --}}
             <div class="glass-card glass-card-static lg:col-span-2 fade-in overflow-hidden relative p-0 flex items-center justify-center">
-                <img src="/images/illustration1.png"
-                     alt="Suite FRECORP ERP : modules connectés, IA et conformité"
-                     class="w-full h-full object-cover">
+                <picture>
+                    <source srcset="/images/illustration1.webp" type="image/webp">
+                    <img src="/images/illustration1.png"
+                         alt="Suite FRECORP ERP : modules connectés, IA et conformité"
+                         class="w-full h-full object-cover">
+                </picture>
             </div>
 
             {{-- ═══════ CARD 3 : BIG STAT (mid right) ═══════ --}}
@@ -201,10 +204,13 @@
 
         <div class="relative fade-in -mx-4 sm:-mx-6 lg:-mx-16">
             <div class="relative" style="mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); mask-composite: intersect; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); -webkit-mask-composite: source-in;">
-                <img src="/images/illustration_Flux_IA.png"
-                     alt="Flux automatisé par l'IA : capture, extraction, données structurées, mise à jour, résultat conforme EN16931"
-                     class="w-full h-auto object-contain relative z-10"
-                     style="mix-blend-mode: multiply;">
+                <picture>
+                    <source srcset="/images/illustration_Flux_IA.webp" type="image/webp">
+                    <img src="/images/illustration_Flux_IA.png"
+                         alt="Flux automatisé par l'IA : capture, extraction, données structurées, mise à jour, résultat conforme EN16931"
+                         class="w-full h-auto object-contain relative z-10"
+                         style="mix-blend-mode: multiply;">
+                </picture>
             </div>
             <div class="absolute -inset-12 -z-10 opacity-20 pointer-events-none">
                 <div class="absolute inset-0 gradient-bg blur-3xl rounded-full"></div>
@@ -276,9 +282,12 @@
 
             {{-- Illustration centrale --}}
             <div class="order-1 lg:order-2 relative fade-in">
-                <img src="/images/illlustration_workspace.png"
-                     alt="Aperçu FRECORP ERP : dashboard, KPI, factures, automatisation IA"
-                     class="w-full h-auto object-contain float-slow relative z-10">
+                <picture>
+                    <source srcset="/images/illlustration_workspace.webp" type="image/webp">
+                    <img src="/images/illlustration_workspace.png"
+                         alt="Aperçu FRECORP ERP : dashboard, KPI, factures, automatisation IA"
+                         class="w-full h-auto object-contain float-slow relative z-10">
+                </picture>
                 <div class="absolute -inset-8 -z-10 opacity-40 pointer-events-none">
                     <div class="absolute inset-0 gradient-bg blur-3xl rounded-full"></div>
                 </div>
@@ -365,10 +374,13 @@
 
         <div class="relative fade-in -mx-4 sm:-mx-6 lg:-mx-16">
             <div class="relative" style="mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); mask-composite: intersect; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); -webkit-mask-composite: source-in;">
-                <img src="/images/avant_apres.png"
-                     alt="Comparaison Avant FRECORP (saisie manuelle, fichiers dispersés) vs Après FRECORP (automatisation, données fiables, conformité 2026)"
-                     class="w-full h-auto object-contain relative z-10"
-                     style="mix-blend-mode: multiply;">
+                <picture>
+                    <source srcset="/images/avant_apres.webp" type="image/webp">
+                    <img src="/images/avant_apres.png"
+                         alt="Comparaison Avant FRECORP (saisie manuelle, fichiers dispersés) vs Après FRECORP (automatisation, données fiables, conformité 2026)"
+                         class="w-full h-auto object-contain relative z-10"
+                         style="mix-blend-mode: multiply;">
+                </picture>
             </div>
             <div class="absolute -inset-12 -z-10 opacity-20 pointer-events-none">
                 <div class="absolute inset-0 gradient-bg blur-3xl rounded-full"></div>
