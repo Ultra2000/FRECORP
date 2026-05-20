@@ -59,7 +59,62 @@ class PostResource extends Resource
                         ->required()
                         ->columnSpanFull()
                         ->fileAttachmentsDisk('public')
-                        ->fileAttachmentsDirectory('blog/attachments'),
+                        ->fileAttachmentsDirectory('blog/attachments')
+                        ->saveUploadedFileAttachmentsUsing(function ($file) {
+                            $disk = 'public';
+                            $directory = 'blog/attachments';
+                            $maxWidth = 1200;
+                            $quality = 85;
+
+                            $path = $file->store($directory, $disk);
+                            $fullPath = \Illuminate\Support\Facades\Storage::disk($disk)->path($path);
+                            $mime = $file->getMimeType();
+
+                            if (str_starts_with($mime, 'image/')) {
+                                try {
+                                    [$w, $h] = getimagesize($fullPath);
+
+                                    if ($w > $maxWidth) {
+                                        $ratio = $maxWidth / $w;
+                                        $newW = $maxWidth;
+                                        $newH = (int) round($h * $ratio);
+
+                                        $source = match ($mime) {
+                                            'image/jpeg' => imagecreatefromjpeg($fullPath),
+                                            'image/png'  => imagecreatefrompng($fullPath),
+                                            'image/webp' => imagecreatefromwebp($fullPath),
+                                            default      => null,
+                                        };
+
+                                        if ($source) {
+                                            $resized = imagecreatetruecolor($newW, $newH);
+
+                                            // Préserver la transparence pour PNG/WebP
+                                            if (in_array($mime, ['image/png', 'image/webp'])) {
+                                                imagealphablending($resized, false);
+                                                imagesavealpha($resized, true);
+                                            }
+
+                                            imagecopyresampled($resized, $source, 0, 0, 0, 0, $newW, $newH, $w, $h);
+
+                                            match ($mime) {
+                                                'image/jpeg' => imagejpeg($resized, $fullPath, $quality),
+                                                'image/png'  => imagepng($resized, $fullPath, 8),
+                                                'image/webp' => imagewebp($resized, $fullPath, $quality),
+                                                default      => null,
+                                            };
+
+                                            imagedestroy($source);
+                                            imagedestroy($resized);
+                                        }
+                                    }
+                                } catch (\Throwable $e) {
+                                    \Illuminate\Support\Facades\Log::warning('Blog image resize failed: ' . $e->getMessage());
+                                }
+                            }
+
+                            return \Illuminate\Support\Facades\Storage::disk($disk)->url($path);
+                        }),
                 ])
                 ->columns(2),
 
@@ -70,6 +125,9 @@ class PostResource extends Resource
                         ->image()
                         ->disk('public')
                         ->directory('blog/images')
+                        ->imageResizeMode('cover')
+                        ->imageResizeTargetWidth('1200')
+                        ->imageResizeTargetHeight('630')
                         ->columnSpanFull(),
 
                     Forms\Components\TextInput::make('reading_time')

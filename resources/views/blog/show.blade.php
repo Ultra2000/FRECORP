@@ -42,7 +42,7 @@
         .prose code { background: rgba(99, 102, 241, .08); color: #6366f1; padding: .2em .45em; border-radius: .35rem; font-size: .9em; font-weight: 500; }
         .prose pre { background: #0f172a; color: #e2e8f0; border-radius: .9rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
         .prose pre code { background: transparent; color: inherit; padding: 0; }
-        .prose img { border-radius: 1rem; margin: 1.5rem 0; max-width: 100%; box-shadow: 0 10px 40px rgba(99, 102, 241, .08); }
+        .prose img { display: block; margin: 2rem auto; max-width: 100%; width: 100%; max-height: 520px; object-fit: contain; border-radius: 1rem; box-shadow: 0 10px 40px rgba(99, 102, 241, .08); background: #f8fafc; }
     </style>
 @endsection
 
